@@ -126,9 +126,33 @@
         _latitudeLabel.text = [NSString stringWithFormat:@"%g", dblLatitude];
         _longitudeLabel.text = [NSString stringWithFormat:@"%g", dblLongitude];
         
-        /*PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-        testObject[@"foo"] = @"bar";
-        [testObject saveInBackground];*/
+        
+        CLLocationCoordinate2D coordinate = [currentLocation coordinate];
+        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
+                                                      longitude:coordinate.longitude];
+        
+        /*PFObject *object = [PFObject objectWithClassName:@"Location"];
+        [object setObject:geoPoint forKey:@"location"];
+        [object saveEventually:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                // Reload the PFQueryTableViewController
+                NSLog(@"saved");
+                [locationManager stopUpdatingLocation];
+            }
+        }];*/
+        
+        
+        PFObject *pothole = [PFObject objectWithClassName:@"Pothole"];
+        pothole[@"event"] = [NSString stringWithFormat:@"%@", clickedEvent];
+        pothole[@"location"] = geoPoint;
+        [pothole saveEventually:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                NSLog(@"saved");
+                [locationManager stopUpdatingLocation];
+            }
+        }];
+        //[pothole saveInBackground];
+        
     }
 }
 @end

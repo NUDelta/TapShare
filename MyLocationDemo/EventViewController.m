@@ -63,6 +63,13 @@
     
     [self.mapView addAnnotation:point];
     NSLog(@"Annotation added");
+    
+   /* NSLog(@"%f", geoPoint.latitude);
+    NSLog(@"%f", geoPoint.longitude);
+    [geoPoint setLatitude:geoPoint.latitude];
+    [geoPoint setLongitude:geoPoint.longitude];*/
+    // call code that saves geolocation to Parse into whatever gets geolocation
+    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

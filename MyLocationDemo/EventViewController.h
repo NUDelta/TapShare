@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import <Parse/Parse.h>
 
 @interface EventViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *eventTitle;
