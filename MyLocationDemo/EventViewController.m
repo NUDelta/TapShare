@@ -14,6 +14,9 @@
 
 @implementation EventViewController {
     CLLocationManager *locationManager;
+    CLGeocoder *geocoder;
+    CLPlacemark *placemark;
+    //CLLocationCoordinate2D coordinate;
 }
 @synthesize eventTitle;
 @synthesize eventName;
@@ -33,6 +36,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    geocoder = [[CLGeocoder alloc] init];
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.distanceFilter = kCLDistanceFilterNone;
@@ -45,9 +49,19 @@
     eventTitle.text = eventName;
     latData.text = [NSString stringWithFormat:@"Latitude: %g", latitude];
     longData.text = [NSString stringWithFormat:@"Longitude: %g", longitude];
-
+    
     self.mapView.delegate = self;
     self.mapView.userTrackingMode = YES;
+    
+    /*PFQuery *query = [PFQuery queryWithClassName:@"Report"];
+    [query getObjectInBackgroundWithId:@"xWMyZ4YEGZ" block:^(PFObject *gameScore, NSError *error) {
+        // Do something with the returned PFObject in the gameScore variable.
+        NSLog(@"%@", gameScore);
+    }];
+    
+    int score = [[gameScore objectForKey:@"score"] intValue];
+    NSString *playerName = gameScore[@"playerName"];
+    BOOL cheatMode = [gameScore[@"cheatMode"] boolValue];*/
     
 }
 
@@ -64,6 +78,23 @@
     [self.mapView addAnnotation:point];
     NSLog(@"Annotation added");
     
+    /*coordinate = [userLocation coordinate];
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
+                                                  longitude:coordinate.longitude];
+    
+    if (userLocation != nil) {
+        PFObject *report = [PFObject objectWithClassName:@"Report"];
+        report[@"event"] = [NSString stringWithFormat:@"%@", eventName];
+        report[@"location"] = geoPoint;
+        [report saveEventually:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                //[locationManager stopUpdatingLocation];
+                NSLog(@"saved");
+            }
+        }];
+    }*/
+
+    
    /* NSLog(@"%f", geoPoint.latitude);
     NSLog(@"%f", geoPoint.longitude);
     [geoPoint setLatitude:geoPoint.latitude];
@@ -72,10 +103,16 @@
     
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+    self.mapView.delegate = nil;
+    [super viewWillDisappear:animated];
+}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"returnHome"])
     {
         [self.navigationController popToRootViewControllerAnimated:YES];
+        
     }
 }
 

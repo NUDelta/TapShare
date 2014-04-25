@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
-#import <Parse/Parse.h>
 
-@interface MyLocationViewController : UIViewController <CLLocationManagerDelegate>
+@interface MyLocationViewController : UIViewController
 
 @end
