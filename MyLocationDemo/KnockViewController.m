@@ -101,10 +101,11 @@
     PFObject *report = [PFObject objectWithClassName:@"Report"];
     report[@"event"] = [NSString stringWithFormat:@"%@", clickedEvent];
     report[@"location"] = geoPoint;
+    NSLog(@"%@", report);
     [report saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
      if (!error) {
          NSLog(@"saved successfully");
-         NSLog(@"%@", report);
+         //NSLog(@"%@", report);
      } else {
          NSLog(@"error: didn't save");
      }
@@ -121,6 +122,11 @@
     //report[@"location"] = geoPoint;
     NSLog(@"saved: %@", report);
     [report saveInBackground];*/
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [self.theDetector.listener stopCollectingMotionInformation];
 }
 
 #pragma mark - CLLocationManagerDelegate
