@@ -29,6 +29,13 @@
     return self;
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    self.theDetector = [[knockDetector alloc] init];
+    self.theDetector.delegate = self;
+    [self.theDetector.listener collectMotionInformationWithInterval:(10)];
+    NSLog(@"started knock detection");
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -41,10 +48,6 @@
     
     reportType.text = [NSString stringWithFormat:@"Reported: %@", eventName];
     clickedEvent = eventName;
-    
-    self.theDetector = [[knockDetector alloc] init];
-    self.theDetector.delegate = self;
-    [self.theDetector.listener collectMotionInformationWithInterval:(20)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,15 +56,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)knockDetectorDidDetect:(knockDetector*) detector
+- (void)detectorDidDetectKnock:(knockDetector*) detector
 {
     float latitude = locationManager.location.coordinate.latitude;
     float longitude = locationManager.location.coordinate.longitude;
     NSLog(@"Did detect knock");
     
+    
+    //[self performSegueWithIdentifier:@"reportSuccess" sender:self];
     [self saveReport];
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    [self performSegueWithIdentifier:@"reportSuccess" sender:self];
+    
     NSLog(@"Latitude: %f", latitude);
     NSLog(@"Longitude: %f", longitude);
     NSLog(@"Event: %@", clickedEvent);
@@ -82,14 +87,6 @@
             NSLog(@"error: didn't save");
         }
     }];*/
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"submit"])
-    {
-        SubmitViewController *destViewController = (SubmitViewController *)segue.destinationViewController;
-        //destViewController.eventName = [NSString stringWithFormat:@"Reported: %@", clickedEvent];
-    }
 }
 
 - (void)saveReport

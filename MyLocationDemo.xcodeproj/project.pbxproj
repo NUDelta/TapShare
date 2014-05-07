@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E50AC9E3191AEC9D00A3556A /* KBKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AC9E0191AEC9D00A3556A /* KBKeyboardHandler.m */; };
+		E50AC9E4191AEC9D00A3556A /* KBKeyboardHandlerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AC9E2191AEC9D00A3556A /* KBKeyboardHandlerDelegate.m */; };
+		E50AC9E7191AF0CF00A3556A /* coreMotionListener.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AC9E6191AF0CF00A3556A /* coreMotionListener.m */; };
 		E50BD4D018EF3AEE0025C794 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50BD4CF18EF3AEE0025C794 /* Foundation.framework */; };
 		E50BD4D218EF3AEE0025C794 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50BD4D118EF3AEE0025C794 /* CoreGraphics.framework */; };
 		E50BD4D418EF3AEE0025C794 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50BD4D318EF3AEE0025C794 /* UIKit.framework */; };
@@ -34,9 +37,8 @@
 		E56B38651900E91B007A71E5 /* KnockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B38641900E91B007A71E5 /* KnockViewController.m */; };
 		E56B386819010974007A71E5 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B386719010974007A71E5 /* SubmitViewController.m */; };
 		E586933918F7AEB200573E37 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E586933818F7AEB200573E37 /* MapKit.framework */; };
+		E5C20D5C191AF0FB00C4DCF0 /* knockDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C20D5B191AF0FB00C4DCF0 /* knockDetector.m */; };
 		E5CBAE8D1900B33B00C4001F /* ReportsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CBAE8C1900B33B00C4001F /* ReportsViewController.m */; };
-		E5CBAE921900E1AC00C4001F /* coreMotionListener.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CBAE8F1900E1AC00C4001F /* coreMotionListener.m */; };
-		E5CBAE931900E1AC00C4001F /* knockDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CBAE911900E1AC00C4001F /* knockDetector.m */; };
 		E5E9B6E41901BD1800566052 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E9B6E31901BD1800566052 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E50AC9DF191AEC9D00A3556A /* KBKeyboardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBKeyboardHandler.h; sourceTree = "<group>"; };
+		E50AC9E0191AEC9D00A3556A /* KBKeyboardHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBKeyboardHandler.m; sourceTree = "<group>"; };
+		E50AC9E1191AEC9D00A3556A /* KBKeyboardHandlerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBKeyboardHandlerDelegate.h; sourceTree = "<group>"; };
+		E50AC9E2191AEC9D00A3556A /* KBKeyboardHandlerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBKeyboardHandlerDelegate.m; sourceTree = "<group>"; };
+		E50AC9E5191AF0CF00A3556A /* coreMotionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coreMotionListener.h; sourceTree = "<group>"; };
+		E50AC9E6191AF0CF00A3556A /* coreMotionListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coreMotionListener.m; sourceTree = "<group>"; };
 		E50BD4CC18EF3AEE0025C794 /* MyLocationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50BD4CF18EF3AEE0025C794 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E50BD4D118EF3AEE0025C794 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -86,12 +94,10 @@
 		E56B386619010974007A71E5 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
 		E56B386719010974007A71E5 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
 		E586933818F7AEB200573E37 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E5C20D5A191AF0FB00C4DCF0 /* knockDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = knockDetector.h; sourceTree = "<group>"; };
+		E5C20D5B191AF0FB00C4DCF0 /* knockDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = knockDetector.m; sourceTree = "<group>"; };
 		E5CBAE8B1900B33B00C4001F /* ReportsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportsViewController.h; sourceTree = "<group>"; };
 		E5CBAE8C1900B33B00C4001F /* ReportsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportsViewController.m; sourceTree = "<group>"; };
-		E5CBAE8E1900E1AC00C4001F /* coreMotionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coreMotionListener.h; path = ../../../../Downloads/coreMotionListener.h; sourceTree = "<group>"; };
-		E5CBAE8F1900E1AC00C4001F /* coreMotionListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coreMotionListener.m; path = ../../../../Downloads/coreMotionListener.m; sourceTree = "<group>"; };
-		E5CBAE901900E1AC00C4001F /* knockDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = knockDetector.h; path = ../../../../Downloads/knockDetector.h; sourceTree = "<group>"; };
-		E5CBAE911900E1AC00C4001F /* knockDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = knockDetector.m; path = ../../../../Downloads/knockDetector.m; sourceTree = "<group>"; };
 		E5E9B6E31901BD1800566052 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,14 +185,18 @@
 				E50BD4E118EF3AEE0025C794 /* Main.storyboard */,
 				E50BD4E418EF3AEE0025C794 /* MyLocationViewController.h */,
 				E50BD4E518EF3AEE0025C794 /* MyLocationViewController.m */,
+				E50AC9DF191AEC9D00A3556A /* KBKeyboardHandler.h */,
+				E50AC9E0191AEC9D00A3556A /* KBKeyboardHandler.m */,
+				E50AC9E1191AEC9D00A3556A /* KBKeyboardHandlerDelegate.h */,
+				E50AC9E2191AEC9D00A3556A /* KBKeyboardHandlerDelegate.m */,
 				E516CB4918F71D17000334C3 /* EventViewController.h */,
 				E516CB4A18F71D17000334C3 /* EventViewController.m */,
 				E56B38631900E91B007A71E5 /* KnockViewController.h */,
 				E56B38641900E91B007A71E5 /* KnockViewController.m */,
-				E5CBAE8E1900E1AC00C4001F /* coreMotionListener.h */,
-				E5CBAE8F1900E1AC00C4001F /* coreMotionListener.m */,
-				E5CBAE901900E1AC00C4001F /* knockDetector.h */,
-				E5CBAE911900E1AC00C4001F /* knockDetector.m */,
+				E50AC9E5191AF0CF00A3556A /* coreMotionListener.h */,
+				E50AC9E6191AF0CF00A3556A /* coreMotionListener.m */,
+				E5C20D5A191AF0FB00C4DCF0 /* knockDetector.h */,
+				E5C20D5B191AF0FB00C4DCF0 /* knockDetector.m */,
 				E56B386619010974007A71E5 /* SubmitViewController.h */,
 				E56B386719010974007A71E5 /* SubmitViewController.m */,
 				E5CBAE8B1900B33B00C4001F /* ReportsViewController.h */,
@@ -324,14 +334,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5CBAE921900E1AC00C4001F /* coreMotionListener.m in Sources */,
+				E50AC9E7191AF0CF00A3556A /* coreMotionListener.m in Sources */,
+				E50AC9E4191AEC9D00A3556A /* KBKeyboardHandlerDelegate.m in Sources */,
+				E50AC9E3191AEC9D00A3556A /* KBKeyboardHandler.m in Sources */,
 				E50BD4DC18EF3AEE0025C794 /* main.m in Sources */,
-				E5CBAE931900E1AC00C4001F /* knockDetector.m in Sources */,
 				E516CB4B18F71D17000334C3 /* EventViewController.m in Sources */,
 				E56B386819010974007A71E5 /* SubmitViewController.m in Sources */,
 				E50BD4E618EF3AEE0025C794 /* MyLocationViewController.m in Sources */,
 				E56B38651900E91B007A71E5 /* KnockViewController.m in Sources */,
 				E50BD4E018EF3AEE0025C794 /* MyLocationAppDelegate.m in Sources */,
+				E5C20D5C191AF0FB00C4DCF0 /* knockDetector.m in Sources */,
 				E5CBAE8D1900B33B00C4001F /* ReportsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,9 +26,21 @@
     return self;
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    NSTimer *myTimer = [NSTimer timerWithTimeInterval:3.0
+                                               target:self
+                                             selector:@selector(timerFireMethod:)
+                                             userInfo:nil
+                                              repeats: YES];
+    
+    [[NSRunLoop mainRunLoop] addTimer: myTimer
+                              forMode: NSDefaultRunLoopMode];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     PFQuery *query = [PFQuery queryWithClassName:@"Report"];
     [query orderByDescending:@"createdAt"];
@@ -44,19 +56,11 @@
     
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"returnHome"])
-    {
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    }
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 /*
 #pragma mark - Navigation
@@ -69,4 +73,13 @@
 }
 */
 
+- (void)timerFireMethod:(NSTimer *)timer
+{
+    // Whatever the segue is called to your second view controller. Don't forget to set it in your storyboard ;)
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)popToRoot:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end

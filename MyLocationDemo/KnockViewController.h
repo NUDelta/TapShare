@@ -13,7 +13,7 @@
 #import "knockDetector.h"
 
 @interface KnockViewController : UIViewController<KnockDetectorDelegate, CLLocationManagerDelegate>
-- (void)knockDetectorDidDetect:(knockDetector*) detector;
+- (void)detectorDidDetectKnock:(knockDetector*) detector;
 @property knockDetector *theDetector;
 @property (strong, nonatomic) NSString *eventName;
 @property (strong, nonatomic) IBOutlet UILabel *reportType;

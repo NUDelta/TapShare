@@ -15,15 +15,24 @@
 - (IBAction)getCurrentLocation2:(id)sender;
 - (IBAction)getCurrentLocation3:(id)sender;
 - (IBAction)getCurrentLocation4:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *selfReport;
+- (IBAction)getCurrentLocation5:(id)sender;
 @end
 
 @implementation MyLocationViewController {
     NSString *clickedEvent;
+    KBKeyboardHandler *keyboard;
 }
+
+@synthesize selfReport;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    selfReport.delegate = self;
+    keyboard = [[KBKeyboardHandler alloc] init];
+    keyboard.delegate = self;
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -48,6 +57,9 @@
         destViewController.eventName = clickedEvent;
     } else if ([segue.identifier isEqualToString:@"light"])
     {
+        KnockViewController *destViewController = (KnockViewController *)segue.destinationViewController;
+        destViewController.eventName = clickedEvent;
+    } else if ([segue.identifier isEqualToString:@"custom"]) {
         KnockViewController *destViewController = (KnockViewController *)segue.destinationViewController;
         destViewController.eventName = clickedEvent;
     } else if ([segue.identifier isEqualToString:@"showReports"])
@@ -75,4 +87,45 @@
 
 - (IBAction)selfReports:(id)sender {
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+}
+
+- (IBAction)getCurrentLocation5:(id)sender {
+    clickedEvent = selfReport.text;
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)keyboardSizeChanged:(CGSize)delta {
+    CGRect frame = [self.view frame];
+    frame.origin.y -= delta.height / 2;
+    self.view.frame = frame;
+}
+
+/*- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    textField.returnKeyType = UIReturnKeyDone;
+    [UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDelegate:self];
+	[UIView setAnimationDuration:0.2];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	selfReport.frame = CGRectMake(selfReport.frame.origin.x, (selfReport.frame.origin.y - 100.0), selfReport.frame.size.width, selfReport.frame.size.height);
+	[UIView commitAnimations];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDelegate:self];
+	[UIView setAnimationDuration:0.2];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	selfReport.frame = CGRectMake(selfReport.frame.origin.x, (selfReport.frame.origin.y + 100.0), selfReport.frame.size.width, selfReport.frame.size.height);
+	[UIView commitAnimations];
+}*/
+
 @end

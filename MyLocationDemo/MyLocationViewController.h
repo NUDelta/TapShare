@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KBKeyboardHandler.h"
+#import "KBKeyboardHandlerDelegate.h"
 
 @interface MyLocationViewController : UIViewController
+@end
 
+@interface ViewController : UIViewController <UITextFieldDelegate, KBKeyboardHandlerDelegate>
 @end
