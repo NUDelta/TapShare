@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			#key {
+	      		width: 300px;
+	      		height: 130px;
+	      		z-index: 0;
+	      		background-color: white;
+	      		font-family: 'Helvetica', sans-serif;
+	      		padding: 15px;
+	      		margin: 30px;
+	      		position: absolute;
+	      		bottom: 10px;
+	      		right: 10px;
+	      	}
+	      	
+	      	html, body, #map-canvas {
+		        height: 100%;
+		        z-index: -1;
+	      	}
+
+	    </style>
+		<title>Parse Visualization</title>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+    
+	</head>
+
+	<body>
+		<div id="key">
+			<b>Key</b>
+			<ul>
+				<li>Pink: No Curb Ramp</li>
+				<li>Purple: Broken Street Light</li>
+				<li>Green: Pothole</li>
+				<li>Orange: Full Trash Can</li>
+			</ul>
+		</div>
+
+		<div id="map-canvas"></div>
+
+	<script type="text/javascript">
+		var map;
+		function initialize() {
+		  var mapOptions = {
+		    zoom: 16,
+		    center: new google.maps.LatLng(42.054854, -87.673945)
+		  };
+		  map = new google.maps.Map(document.getElementById('map-canvas'),
+		      mapOptions);
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+
+		var curb = 'markers/curb.png';
+		var pothole = 'markers/pothole.png';
+		var light = 'markers/light.png';
+		var trash = 'markers/trash.png';
+
+		Parse.initialize("zkStIiBgvGoBkJrSUd2tTrgO4wYG8hPdvhyeCxj2", "bUcHJJFekG241HLLj8KIiDQbMUhzk0U6F1zOzkXW");
+		var Report = Parse.Object.extend("Report");
+		var query = new Parse.Query(Report);
+		query.equalTo("event", "Pothole");
+		query.find({
+		  success: function(results) {
+		    // Do something with the returned Parse.Object values
+		    for (var i = 0; i < results.length; i++) { 
+		      var object = results[i];
+		      console.log(object.id + ' - ' + object.get('event'));
+		      var geopoint = object.get("location").toJSON();
+		      var lat = geopoint.latitude;
+		      var lon = geopoint.longitude;
+		      var myLatlng = new google.maps.LatLng(lat,lon);
+		      var marker = new google.maps.Marker({
+		      	position: myLatlng,
+		      	map: map,
+		      	icon: pothole,
+		      	title: "Pothole"
+		      });
+		      marker.setMap(map);
+		      console.log(lat);
+		      console.log(lon);
+		    }
+		  },
+		  error: function(error) {
+		    alert("Error: " + error.code + " " + error.message);
+		  }
+		});
+
+		query.equalTo("event", "Broken Street Light");
+		query.find({
+		  success: function(results) {
+		    // Do something with the returned Parse.Object values
+		    for (var i = 0; i < results.length; i++) { 
+		      var object = results[i];
+		      console.log(object.id + ' - ' + object.get('event'));
+		      var geopoint = object.get("location").toJSON();
+		      var lat = geopoint.latitude;
+		      var lon = geopoint.longitude;
+		      var myLatlng = new google.maps.LatLng(lat,lon);
+		      var marker = new google.maps.Marker({
+		      	position: myLatlng,
+		      	map: map,
+		      	icon: light,
+		      	title: "Broken Street Light"
+		      });
+		      marker.setMap(map);
+		      console.log(lat);
+		      console.log(lon);
+		    }
+		  },
+		  error: function(error) {
+		    alert("Error: " + error.code + " " + error.message);
+		  }
+		});
+
+		query.equalTo("event", "No Curb Ramp");
+		query.find({
+		  success: function(results) {
+		    // Do something with the returned Parse.Object values
+		    for (var i = 0; i < results.length; i++) { 
+		      var object = results[i];
+		      console.log(object.id + ' - ' + object.get('event'));
+		      var geopoint = object.get("location").toJSON();
+		      var lat = geopoint.latitude;
+		      var lon = geopoint.longitude;
+		      var myLatlng = new google.maps.LatLng(lat,lon);
+		      var marker = new google.maps.Marker({
+		      	position: myLatlng,
+		      	map: map,
+		      	icon: curb,
+		      	title: "No Curb Ramp"
+		      });
+		      marker.setMap(map);
+		      console.log(lat);
+		      console.log(lon);
+		    }
+		  },
+		  error: function(error) {
+		    alert("Error: " + error.code + " " + error.message);
+		  }
+		});
+
+		query.equalTo("event", "Full Trash Can");
+		query.find({
+		  success: function(results) {
+		    // Do something with the returned Parse.Object values
+		    for (var i = 0; i < results.length; i++) { 
+		      var object = results[i];
+		      console.log(object.id + ' - ' + object.get('event'));
+		      var geopoint = object.get("location").toJSON();
+		      var lat = geopoint.latitude;
+		      var lon = geopoint.longitude;
+		      var myLatlng = new google.maps.LatLng(lat,lon);
+		      var marker = new google.maps.Marker({
+		      	position: myLatlng,
+		      	map: map,
+		      	icon: trash,
+		      	title: "Full Trash Can"
+		      });
+		      marker.setMap(map);
+		      console.log(lat);
+		      console.log(lon);
+		    }
+		  },
+		  error: function(error) {
+		    alert("Error: " + error.code + " " + error.message);
+		  }
+		});
+		
+	</script>
+	</body>
+</html>
