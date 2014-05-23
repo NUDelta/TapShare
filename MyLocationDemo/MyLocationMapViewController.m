@@ -56,17 +56,17 @@ static int HIDE = 1;
     }
     
     if (self.myReportSegmentControl.selectedSegmentIndex == SHOW) {
-        [self annotateMap:self.myReportArray withColor:MKPinAnnotationColorGreen];
+        [self annotateMap:self.myReportArray withType:@"myReport"];
     }
     if (self.everyoneElseSegmentControl.selectedSegmentIndex == SHOW) {
-        [self annotateMap:self.everyoneElseReportArray withColor:MKPinAnnotationColorGreen];
+        [self annotateMap:self.everyoneElseReportArray withType:@"everyoneElseReport"];
     }
 }
 
 - (void)divideReports
 {
     for (PFObject *report in self.reportArray) {
-        if (report[@"userID"] == [[PFUser currentUser] objectId]) {
+        if ([report[@"userID"] isEqualToString:[[PFUser currentUser] objectId]]) {
             [self.myReportArray addObject:report];
         } else {
             [self.everyoneElseReportArray addObject:report];
@@ -74,7 +74,7 @@ static int HIDE = 1;
     }
 }
 
-- (void)annotateMap:(NSArray *)annotations withColor:(int)color
+- (void)annotateMap:(NSArray *)annotations withType:(NSString *)type
 {
     for (PFObject *report in annotations) {
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
@@ -84,22 +84,24 @@ static int HIDE = 1;
         annotationCoord.longitude = geoPoint.longitude;
         //MKPinAnnotationView *pinAnnotation = [self returnPointView:annotationCoord andTitle:@"Report" andColor:color];
         annotation.coordinate = annotationCoord;
+        annotation.title = type;
         [self.mapView addAnnotation:annotation];
-        MKPinAnnotationView *view = (MKPinAnnotationView *)[self.mapView viewForAnnotation:annotation];
-        [view setPinColor:color];
-        [view setAnimatesDrop:YES];
         [self.mapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(annotationCoord.latitude, annotationCoord.longitude), MKCoordinateSpanMake(0.025, 0.025))];
         [self.mapView showAnnotations:self.mapView.annotations animated:YES];
     }
 }
 
-/*- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(MKPointAnnotation *)annotation
 {
-    [mapView dequeueReusableAnnotationViewWithIdentifier:@"]
-    MKPinAnnotationView *view = [[MKPinAnnotationView alloc] init];
-    view.pinColor = MKPinAnnotationColorGreen;
-    return view;
-}*/
+    MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"annotation"];
+    if ([annotation.title isEqualToString:@"myReport"]) {
+        annotationView.pinColor = MKPinAnnotationColorPurple;
+    } else {
+        annotationView.pinColor = MKPinAnnotationColorGreen;
+    }
+    annotationView.animatesDrop = YES;
+    return annotationView;
+}
 
 /*- (MKPinAnnotationView *)returnPointView: (CLLocationCoordinate2D) location andTitle: (NSString*) title andColor: (int) color
 {
