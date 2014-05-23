@@ -37,10 +37,10 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if ([PFUser currentUser] && [[PFUser currentUser] isAuthenticated]) {
+    /*if ([PFUser currentUser] && [[PFUser currentUser] isAuthenticated]) {
         NSLog(@"%@", [PFUser currentUser]);
         [self performSegueWithIdentifier:@"login" sender:self];
-    }
+    }*/
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -19,6 +19,18 @@
                   clientKey:@"ffLZCqCLe1wzlMKoX6qoBOeFExENIMhRqQHcANA3"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     // Override point for customization after application launch.
+    if ([PFUser currentUser] && [[PFUser currentUser] isAuthenticated]) {
+        NSLog(@"%@", [PFUser currentUser]);
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        MyLocationTableViewController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"homeView"];
+        [(UINavigationController*)self.window.rootViewController pushViewController:ivc animated:NO];
+    }
+    
+    
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+    pageControl.backgroundColor = [UIColor whiteColor];
     return YES;
 }
 							
