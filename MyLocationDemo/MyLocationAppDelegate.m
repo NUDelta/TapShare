@@ -7,6 +7,8 @@
 //
 
 #import "MyLocationAppDelegate.h"
+#import "MyLocationLoginViewController.h"
+#import "MyLocationTableViewController.h"
 #import <Parse/Parse.h>
 
 @implementation MyLocationAppDelegate
@@ -28,8 +30,10 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    UIBackgroundTaskIdentifier bgTask = 0;
+    bgTask = [application beginBackgroundTaskWithExpirationHandler:^{
+        [application endBackgroundTask:bgTask];
+    }];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

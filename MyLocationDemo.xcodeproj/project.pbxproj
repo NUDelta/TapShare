@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC07F319192697A10008BA21 /* MyLocationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC07F318192697A10008BA21 /* MyLocationTableViewController.m */; };
+		DC6AE9EE192C62E100382D34 /* MyLocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AE9ED192C62E100382D34 /* MyLocationMapViewController.m */; };
+		DC6AE9F1192C712400382D34 /* MyLocationLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AE9F0192C712400382D34 /* MyLocationLoginViewController.m */; };
 		E50AC9E3191AEC9D00A3556A /* KBKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AC9E0191AEC9D00A3556A /* KBKeyboardHandler.m */; };
 		E50AC9E4191AEC9D00A3556A /* KBKeyboardHandlerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AC9E2191AEC9D00A3556A /* KBKeyboardHandlerDelegate.m */; };
 		E50AC9E7191AF0CF00A3556A /* coreMotionListener.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AC9E6191AF0CF00A3556A /* coreMotionListener.m */; };
@@ -53,6 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC07F317192697A10008BA21 /* MyLocationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationTableViewController.h; sourceTree = "<group>"; };
+		DC07F318192697A10008BA21 /* MyLocationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocationTableViewController.m; sourceTree = "<group>"; };
+		DC6AE9EC192C62E100382D34 /* MyLocationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationMapViewController.h; sourceTree = "<group>"; };
+		DC6AE9ED192C62E100382D34 /* MyLocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocationMapViewController.m; sourceTree = "<group>"; };
+		DC6AE9EF192C712400382D34 /* MyLocationLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationLoginViewController.h; sourceTree = "<group>"; };
+		DC6AE9F0192C712400382D34 /* MyLocationLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocationLoginViewController.m; sourceTree = "<group>"; };
 		E50AC9DF191AEC9D00A3556A /* KBKeyboardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBKeyboardHandler.h; sourceTree = "<group>"; };
 		E50AC9E0191AEC9D00A3556A /* KBKeyboardHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBKeyboardHandler.m; sourceTree = "<group>"; };
 		E50AC9E1191AEC9D00A3556A /* KBKeyboardHandlerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBKeyboardHandlerDelegate.h; sourceTree = "<group>"; };
@@ -183,6 +192,12 @@
 				E50BD4DE18EF3AEE0025C794 /* MyLocationAppDelegate.h */,
 				E50BD4DF18EF3AEE0025C794 /* MyLocationAppDelegate.m */,
 				E50BD4E118EF3AEE0025C794 /* Main.storyboard */,
+				DC6AE9EF192C712400382D34 /* MyLocationLoginViewController.h */,
+				DC6AE9F0192C712400382D34 /* MyLocationLoginViewController.m */,
+				DC07F317192697A10008BA21 /* MyLocationTableViewController.h */,
+				DC07F318192697A10008BA21 /* MyLocationTableViewController.m */,
+				DC6AE9EC192C62E100382D34 /* MyLocationMapViewController.h */,
+				DC6AE9ED192C62E100382D34 /* MyLocationMapViewController.m */,
 				E50BD4E418EF3AEE0025C794 /* MyLocationViewController.h */,
 				E50BD4E518EF3AEE0025C794 /* MyLocationViewController.m */,
 				E50AC9DF191AEC9D00A3556A /* KBKeyboardHandler.h */,
@@ -284,6 +299,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Delta Hackers";
 				TargetAttributes = {
+					E50BD4CB18EF3AEE0025C794 = {
+						DevelopmentTeam = U3R99S3S4W;
+					};
 					E50BD4EC18EF3AEE0025C794 = {
 						TestTargetID = E50BD4CB18EF3AEE0025C794;
 					};
@@ -339,9 +357,12 @@
 				E50AC9E3191AEC9D00A3556A /* KBKeyboardHandler.m in Sources */,
 				E50BD4DC18EF3AEE0025C794 /* main.m in Sources */,
 				E516CB4B18F71D17000334C3 /* EventViewController.m in Sources */,
+				DC6AE9F1192C712400382D34 /* MyLocationLoginViewController.m in Sources */,
+				DC6AE9EE192C62E100382D34 /* MyLocationMapViewController.m in Sources */,
 				E56B386819010974007A71E5 /* SubmitViewController.m in Sources */,
 				E50BD4E618EF3AEE0025C794 /* MyLocationViewController.m in Sources */,
 				E56B38651900E91B007A71E5 /* KnockViewController.m in Sources */,
+				DC07F319192697A10008BA21 /* MyLocationTableViewController.m in Sources */,
 				E50BD4E018EF3AEE0025C794 /* MyLocationAppDelegate.m in Sources */,
 				E5C20D5C191AF0FB00C4DCF0 /* knockDetector.m in Sources */,
 				E5CBAE8D1900B33B00C4001F /* ReportsViewController.m in Sources */,
@@ -469,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/nzhu94/Downloads,
@@ -483,6 +505,7 @@
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E404697F-B081-4703-AF8A-BED1340ADDE1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -492,6 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/nzhu94/Downloads,
@@ -506,6 +530,7 @@
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E404697F-B081-4703-AF8A-BED1340ADDE1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

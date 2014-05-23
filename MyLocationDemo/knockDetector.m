@@ -55,12 +55,11 @@ double normAll(double x, double y, double z) {
         timeFromFirstKnock = [NSNumber numberWithFloat:fabsf(deviceMotion.timestamp - lastKnockTime)];
         [self.delegate detectorDidDetectKnock:self];
         //[self saveKnockRecord];
-        if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateBackground) {
-            UILocalNotification *notification = [[UILocalNotification alloc] init];
-            notification.alertBody = @"hi";
-            notification.soundName = @"FFLife1.mp3";
-            [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
-        }
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.alertBody = @"hi";
+        notification.soundName = @"FFLife1.mp3";
+        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+    
         NSLog(@"got a new knock");
         
     }

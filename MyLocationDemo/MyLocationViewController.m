@@ -43,6 +43,7 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    [self.selfReport resignFirstResponder];
     if([segue.identifier isEqualToString:@"pothole"])
     {
         KnockViewController *destViewController = (KnockViewController *)segue.destinationViewController;
@@ -105,7 +106,7 @@
 
 - (void)keyboardSizeChanged:(CGSize)delta {
     CGRect frame = [self.view frame];
-    frame.origin.y -= delta.height / 2;
+    frame.origin.y -= delta.height;
     self.view.frame = frame;
 }
 

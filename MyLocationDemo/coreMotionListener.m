@@ -47,7 +47,6 @@
             //NSLog(@"%@", deviceMeasurementData);
         }];
         
-        [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^(void){}];
         /*[self.motionManager startAccelerometerUpdatesToQueue:self.deviceMeasurementsQueue withHandler:^(CMAccelerometerData *data, NSError *error) {
          [self.delegate motionListener:self didReceiveAccelerometerData:data];
          }]; */

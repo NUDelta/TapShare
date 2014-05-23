@@ -44,6 +44,7 @@
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^(void){}];
     [locationManager startUpdatingLocation];
     
     reportType.text = [NSString stringWithFormat:@"Reported: %@", eventName];
@@ -98,6 +99,7 @@
     PFObject *report = [PFObject objectWithClassName:@"Report"];
     report[@"event"] = [NSString stringWithFormat:@"%@", clickedEvent];
     report[@"location"] = geoPoint;
+    report[@"userID"] = [[PFUser currentUser] objectId];
     NSLog(@"%@", report);
     [report saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
      if (!error) {

@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>3F428EBA-491D-43F9-98C3-B4EAE586F4A3</string>
+	<string>C45AE5D5-F8A8-4BA4-820D-0B561BE11B56</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MyLocationDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>46D132F6-3E06-49BB-9C29-954A33DBFAAB</key>
-		<string>https://github.com/NUDelta/pgp-location.git</string>
+		<key>C1B349F4-9E80-4817-BA72-3A3D9C9F34F6</key>
+		<string>https://github.com/NUDelta/pgp-location</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MyLocationDemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>46D132F6-3E06-49BB-9C29-954A33DBFAAB</key>
+		<key>C1B349F4-9E80-4817-BA72-3A3D9C9F34F6</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/NUDelta/pgp-location.git</string>
+	<string>https://github.com/NUDelta/pgp-location</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>46D132F6-3E06-49BB-9C29-954A33DBFAAB</string>
+	<string>C1B349F4-9E80-4817-BA72-3A3D9C9F34F6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>46D132F6-3E06-49BB-9C29-954A33DBFAAB</string>
+			<string>C1B349F4-9E80-4817-BA72-3A3D9C9F34F6</string>
 			<key>IDESourceControlWCCName</key>
-			<string>MyLocationDemo</string>
+			<string>pgp-location</string>
 		</dict>
 	</array>
 </dict>
