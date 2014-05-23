@@ -119,12 +119,13 @@ double normAll(double x, double y, double z) {
     float lastDoubleKnockTimeDifference = fabsf(currentDeviceMotion.timestamp - lastDoubleKnock);
     float lastKnockTimeDifference = fabsf(currentDeviceMotion.timestamp - lastKnockTime);
     //return jounce > 2 && jerk > .01 && normedAccel < 0.01 && normedRotation < 1 && lastDoubleKnockTimeDifference > 1 && lastKnockTimeDifference > 0.1;
-    float total = (jounce * 0.33) + (jerk * 9.94) - (normedRotation * 0.84) + (normedAccel * 548.18) - 1.51;
+    //float total = (jounce * 0.33) + (jerk * 9.94) - (normedRotation * 0.84) + (normedAccel * 548.18) - 1.51;
+    float total = -0.42 + (normedAccel * 296.13) - (jounce * 0.02);
     float odds = 1 / (1 + exp(-total));
     if (odds > 0.999) {
         NSLog(@"%f", odds);
     }
-    return ((odds > 0.999) || [self satisfiesTableKnockThresholds]) && lastDoubleKnockTimeDifference > 1 && lastKnockTimeDifference > 0.15 && normedAccel < 0.008;
+    return ((odds > 0.6) || [self satisfiesTableKnockThresholds]) && lastDoubleKnockTimeDifference > 1 && lastKnockTimeDifference > 0.15 && normedAccel < 0.008;
 }
 
 - (BOOL)satisfiesTableKnockThresholds
@@ -137,7 +138,7 @@ double normAll(double x, double y, double z) {
     if (odds > 0.85) {
         NSLog(@"%f", odds);
     }
-    return odds > 0.85 && lastDoubleKnockTimeDifference > 1 && lastKnockTimeDifference > 0.15 && fabsf(gravity.z) > 0.99;
+    return odds > 1.85 && lastDoubleKnockTimeDifference > 1 && lastKnockTimeDifference > 0.15 && fabsf(gravity.z) > 0.99;
 }
 
 - (BOOL)satisfiesDoubleKnock

@@ -100,6 +100,7 @@
     report[@"event"] = [NSString stringWithFormat:@"%@", clickedEvent];
     report[@"location"] = geoPoint;
     report[@"userID"] = [[PFUser currentUser] objectId];
+    report[@"userName"] = [[PFUser currentUser] objectForKey:@"name"];
     NSLog(@"%@", report);
     [report saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
      if (!error) {

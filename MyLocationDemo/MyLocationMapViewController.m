@@ -48,6 +48,13 @@ static int HIDE = 1;
     [[UISegmentedControl appearance] setTitleTextAttributes:@{
                                                               NSForegroundColorAttributeName : [UIColor whiteColor]
                                                               } forState:UIControlStateNormal];
+    NSLog(@"%@", self.reportType);
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBar.topItem.title = [@"Visualizing: " stringByAppendingString:self.reportType];
+    [super viewWillAppear:animated];
 }
 
 - (void)updateUI

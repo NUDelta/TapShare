@@ -13,6 +13,7 @@
 @interface MyLocationMapViewController : UIViewController <MKMapViewDelegate>
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) NSString *reportType;
 @property (strong, nonatomic) NSArray *reportArray; // of PFObject
 @property (weak, nonatomic) IBOutlet UISegmentedControl *myReportSegmentControl;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *everyoneElseSegmentControl;

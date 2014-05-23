@@ -112,6 +112,7 @@ static int MAP = 1;
                     [specificReportArray addObject:report];
                 }
             }
+            controller.reportType = self.selectedEvent;
             controller.reportArray = specificReportArray;
         }
         
