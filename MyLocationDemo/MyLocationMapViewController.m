@@ -72,6 +72,10 @@ static int HIDE = 1;
             }
         }
     }
+    MKPointAnnotation *lastAnnotation = (MKPointAnnotation *)[self.mapView.annotations lastObject];
+    if (lastAnnotation) {
+        [self.mapView setCenterCoordinate:lastAnnotation.coordinate animated:YES];
+    }
 }
 
 - (void)divideReports
@@ -97,7 +101,6 @@ static int HIDE = 1;
         annotation.coordinate = annotationCoord;
         annotation.title = type;
         [self.mapView addAnnotation:annotation];
-        [self.mapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(annotationCoord.latitude, annotationCoord.longitude), MKCoordinateSpanMake(0.025, 0.025))];
         [self.mapView showAnnotations:self.mapView.annotations animated:NO];
     }
 }

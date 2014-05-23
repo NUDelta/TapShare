@@ -542,7 +542,7 @@
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2DD8D4A7-7343-4047-95A5-9D0A75159833";
+				PROVISIONING_PROFILE = "E404697F-B081-4703-AF8A-BED1340ADDE1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -568,7 +568,7 @@
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2DD8D4A7-7343-4047-95A5-9D0A75159833";
+				PROVISIONING_PROFILE = "E404697F-B081-4703-AF8A-BED1340ADDE1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

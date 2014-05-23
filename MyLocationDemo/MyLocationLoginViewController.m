@@ -9,7 +9,8 @@
 #import "MyLocationLoginViewController.h"
 
 @interface MyLocationLoginViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *loginTextField;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *emailField;
 
 @end
 
@@ -45,12 +46,13 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [self.loginTextField resignFirstResponder];
+    [self.emailField resignFirstResponder];
+    [self.nameField resignFirstResponder];
     if ([segue.identifier isEqualToString:@"login"]) {
         PFUser *user = [PFUser user];
-        user.username = self.loginTextField.text;
+        user.username = self.emailField.text;
         user.password = @"";
-        [PFUser logInWithUsername:self.loginTextField.text password:@""];
+        user[@"name"] = self.nameField.text;
         [user signUpInBackground];
     }
 }
@@ -74,7 +76,7 @@
 
 - (void)keyboardSizeChanged:(CGSize)delta {
     CGRect frame = [self.view frame];
-    frame.origin.y -= delta.height;
+    frame.origin.y -= delta.height / 2;
     self.view.frame = frame;
 }
 
