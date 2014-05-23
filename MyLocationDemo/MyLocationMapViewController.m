@@ -44,22 +44,33 @@ static int HIDE = 1;
     [self.everyoneElseSegmentControl addTarget:self
                                     action:@selector(updateUI)
                           forControlEvents:UIControlEventValueChanged];
+    
+    [[UISegmentedControl appearance] setTitleTextAttributes:@{
+                                                              NSForegroundColorAttributeName : [UIColor whiteColor]
+                                                              } forState:UIControlStateNormal];
 }
 
 - (void)updateUI
 {
-    [self.mapView removeAnnotations:self.mapView.annotations];
+    //[self.mapView removeAnnotations:self.mapView.annotations];
 
-    while ([self.mapView.annotations count] > 0) {
-        // Allow the run loop to do some processing of the stream
-        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];
-    }
-    
     if (self.myReportSegmentControl.selectedSegmentIndex == SHOW) {
         [self annotateMap:self.myReportArray withType:@"myReport"];
+    } else if (self.myReportSegmentControl.selectedSegmentIndex == HIDE) {
+        for (MKPointAnnotation *annotation in self.mapView.annotations) {
+            if ([annotation.title isEqualToString:@"myReport"]) {
+                [self.mapView removeAnnotation:annotation];
+            }
+        }
     }
     if (self.everyoneElseSegmentControl.selectedSegmentIndex == SHOW) {
         [self annotateMap:self.everyoneElseReportArray withType:@"everyoneElseReport"];
+    } else if (self.everyoneElseSegmentControl.selectedSegmentIndex == HIDE) {
+        for (MKPointAnnotation *annotation in self.mapView.annotations) {
+            if (![annotation.title isEqualToString:@"myReport"]) {
+                [self.mapView removeAnnotation:annotation];
+            }
+        }
     }
 }
 
@@ -87,7 +98,7 @@ static int HIDE = 1;
         annotation.title = type;
         [self.mapView addAnnotation:annotation];
         [self.mapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(annotationCoord.latitude, annotationCoord.longitude), MKCoordinateSpanMake(0.025, 0.025))];
-        [self.mapView showAnnotations:self.mapView.annotations animated:YES];
+        [self.mapView showAnnotations:self.mapView.annotations animated:NO];
     }
 }
 
@@ -95,11 +106,11 @@ static int HIDE = 1;
 {
     MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"annotation"];
     if ([annotation.title isEqualToString:@"myReport"]) {
-        annotationView.pinColor = MKPinAnnotationColorPurple;
-    } else {
         annotationView.pinColor = MKPinAnnotationColorGreen;
+    } else {
+        annotationView.pinColor = MKPinAnnotationColorPurple;
     }
-    annotationView.animatesDrop = YES;
+    annotationView.animatesDrop = NO;
     return annotationView;
 }
 

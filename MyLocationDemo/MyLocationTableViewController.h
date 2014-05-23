@@ -14,5 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *reportTableView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *reportMapSegmentControl;
+@property (weak, nonatomic) IBOutlet UILabel *titleText;
 
 @end

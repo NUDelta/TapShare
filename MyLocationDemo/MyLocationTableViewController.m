@@ -43,6 +43,7 @@ static int MAP = 1;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.hidesBackButton = YES;
     self.reportTextField.delegate = self;
     //keyboard = [[KBKeyboardHandler alloc] init];
     //keyboard.delegate = self;
@@ -167,6 +168,11 @@ static int MAP = 1;
 
 - (void)reportMapSegmentControlChanged
 {
+    if (self.reportMapSegmentControl.selectedSegmentIndex == REPORT) {
+        self.titleText.text = @"Select something you want to track";
+    } else if (self.reportMapSegmentControl.selectedSegmentIndex == MAP) {
+        self.titleText.text = @"Select something to see on the map";
+    }
     [self.reportTableView reloadData];
 }
 
