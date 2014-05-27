@@ -43,11 +43,11 @@
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
-    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^(void){}];
     [locationManager startUpdatingLocation];
     
-    reportType.text = [NSString stringWithFormat:@"Reported: %@", eventName];
+    reportType.text = [NSString stringWithFormat:@"Now Tracking: %@", eventName];
     clickedEvent = eventName;
 }
 
@@ -71,6 +71,12 @@
     NSLog(@"Latitude: %f", latitude);
     NSLog(@"Longitude: %f", longitude);
     NSLog(@"Event: %@", clickedEvent);
+    
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.alertBody = [NSString stringWithFormat:@"You reported: %@", self.eventName];
+    AudioServicesPlaySystemSound(0x450);
+    notification.soundName = @"";
+    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
     
     /*CLLocation *location = [locationManager location];
     CLLocationCoordinate2D coordinate = [location coordinate];

@@ -55,10 +55,6 @@ double normAll(double x, double y, double z) {
         timeFromFirstKnock = [NSNumber numberWithFloat:fabsf(deviceMotion.timestamp - lastKnockTime)];
         [self.delegate detectorDidDetectKnock:self];
         //[self saveKnockRecord];
-        UILocalNotification *notification = [[UILocalNotification alloc] init];
-        notification.alertBody = @"hi";
-        notification.soundName = @"FFLife1.mp3";
-        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
     
         NSLog(@"got a new knock");
         
@@ -123,7 +119,7 @@ double normAll(double x, double y, double z) {
     float total = -0.42 + (normedAccel * 296.13) - (jounce * 0.02);
     float odds = 1 / (1 + exp(-total));
     if (odds > 0.999) {
-        NSLog(@"%f", odds);
+       // NSLog(@"%f", odds);
     }
     return ((odds > 0.6) || [self satisfiesTableKnockThresholds]) && lastDoubleKnockTimeDifference > 1 && lastKnockTimeDifference > 0.15 && normedAccel < 0.008;
 }
@@ -136,7 +132,7 @@ double normAll(double x, double y, double z) {
     float total = (jounce * 0.45) + (normedRotation * -0.86) + (jerk * 8.92) - 0.67;
     float odds = 1 / (1 + exp(-total));
     if (odds > 0.85) {
-        NSLog(@"%f", odds);
+       // NSLog(@"%f", odds);
     }
     return odds > 1.85 && lastDoubleKnockTimeDifference > 1 && lastKnockTimeDifference > 0.15 && fabsf(gravity.z) > 0.99;
 }

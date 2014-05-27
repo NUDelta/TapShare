@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSMutableArray *myReportArray;
 @property (strong, nonatomic) NSMutableArray *everyoneElseReportArray;
+@property (weak, nonatomic) IBOutlet UILabel *topLabel;
 
 @end
 
@@ -53,7 +54,7 @@ static int HIDE = 1;
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.navigationBar.topItem.title = [@"Visualizing: " stringByAppendingString:self.reportType];
+    self.topLabel.text = [@"Visualizing: " stringByAppendingString:self.reportType];
     [super viewWillAppear:animated];
 }
 
@@ -81,7 +82,7 @@ static int HIDE = 1;
     }
     MKPointAnnotation *lastAnnotation = (MKPointAnnotation *)[self.mapView.annotations lastObject];
     if (lastAnnotation) {
-        [self.mapView setCenterCoordinate:lastAnnotation.coordinate animated:YES];
+        [self.mapView setCenterCoordinate:lastAnnotation.coordinate animated:NO];
     }
 }
 
@@ -104,7 +105,6 @@ static int HIDE = 1;
         PFGeoPoint *geoPoint = report[@"location"];
         annotationCoord.latitude = geoPoint.latitude;
         annotationCoord.longitude = geoPoint.longitude;
-        //MKPinAnnotationView *pinAnnotation = [self returnPointView:annotationCoord andTitle:@"Report" andColor:color];
         annotation.coordinate = annotationCoord;
         annotation.title = type;
         [self.mapView addAnnotation:annotation];

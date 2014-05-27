@@ -76,23 +76,23 @@
 		E50AC9E2191AEC9D00A3556A /* KBKeyboardHandlerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBKeyboardHandlerDelegate.m; sourceTree = "<group>"; };
 		E50AC9E5191AF0CF00A3556A /* coreMotionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coreMotionListener.h; sourceTree = "<group>"; };
 		E50AC9E6191AF0CF00A3556A /* coreMotionListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coreMotionListener.m; sourceTree = "<group>"; };
-		E50BD4CC18EF3AEE0025C794 /* MyLocationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50BD4CC18EF3AEE0025C794 /* TapThat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapThat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50BD4CF18EF3AEE0025C794 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E50BD4D118EF3AEE0025C794 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E50BD4D318EF3AEE0025C794 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		E50BD4D718EF3AEE0025C794 /* MyLocationDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyLocationDemo-Info.plist"; sourceTree = "<group>"; };
+		E50BD4D718EF3AEE0025C794 /* TapThat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TapThat-Info.plist"; sourceTree = "<group>"; };
 		E50BD4D918EF3AEE0025C794 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E50BD4DB18EF3AEE0025C794 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E50BD4DD18EF3AEE0025C794 /* MyLocationDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyLocationDemo-Prefix.pch"; sourceTree = "<group>"; };
+		E50BD4DD18EF3AEE0025C794 /* TapThat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TapThat-Prefix.pch"; sourceTree = "<group>"; };
 		E50BD4DE18EF3AEE0025C794 /* MyLocationAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLocationAppDelegate.h; sourceTree = "<group>"; };
 		E50BD4DF18EF3AEE0025C794 /* MyLocationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLocationAppDelegate.m; sourceTree = "<group>"; };
 		E50BD4E218EF3AEE0025C794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E50BD4E418EF3AEE0025C794 /* MyLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLocationViewController.h; sourceTree = "<group>"; };
 		E50BD4E518EF3AEE0025C794 /* MyLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLocationViewController.m; sourceTree = "<group>"; };
 		E50BD4E718EF3AEE0025C794 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E50BD4ED18EF3AEE0025C794 /* MyLocationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLocationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50BD4ED18EF3AEE0025C794 /* TapThatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapThatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50BD4EE18EF3AEE0025C794 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		E50BD4F618EF3AEE0025C794 /* MyLocationDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyLocationDemoTests-Info.plist"; sourceTree = "<group>"; };
+		E50BD4F618EF3AEE0025C794 /* TapThatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TapThatTests-Info.plist"; sourceTree = "<group>"; };
 		E50BD4F818EF3AEE0025C794 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E50BD4FA18EF3AEE0025C794 /* MyLocationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLocationDemoTests.m; sourceTree = "<group>"; };
 		E50BD50418EF443F0025C794 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -176,8 +176,8 @@
 		E50BD4CD18EF3AEE0025C794 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E50BD4CC18EF3AEE0025C794 /* MyLocationDemo.app */,
-				E50BD4ED18EF3AEE0025C794 /* MyLocationDemoTests.xctest */,
+				E50BD4CC18EF3AEE0025C794 /* TapThat.app */,
+				E50BD4ED18EF3AEE0025C794 /* TapThatTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,10 +253,10 @@
 		E50BD4D618EF3AEE0025C794 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E50BD4D718EF3AEE0025C794 /* MyLocationDemo-Info.plist */,
+				E50BD4D718EF3AEE0025C794 /* TapThat-Info.plist */,
 				E50BD4D818EF3AEE0025C794 /* InfoPlist.strings */,
 				E50BD4DB18EF3AEE0025C794 /* main.m */,
-				E50BD4DD18EF3AEE0025C794 /* MyLocationDemo-Prefix.pch */,
+				E50BD4DD18EF3AEE0025C794 /* TapThat-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 		E50BD4F518EF3AEE0025C794 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E50BD4F618EF3AEE0025C794 /* MyLocationDemoTests-Info.plist */,
+				E50BD4F618EF3AEE0025C794 /* TapThatTests-Info.plist */,
 				E50BD4F718EF3AEE0025C794 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -282,9 +282,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E50BD4CB18EF3AEE0025C794 /* MyLocationDemo */ = {
+		E50BD4CB18EF3AEE0025C794 /* TapThat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E50BD4FE18EF3AEE0025C794 /* Build configuration list for PBXNativeTarget "MyLocationDemo" */;
+			buildConfigurationList = E50BD4FE18EF3AEE0025C794 /* Build configuration list for PBXNativeTarget "TapThat" */;
 			buildPhases = (
 				E50BD4C818EF3AEE0025C794 /* Sources */,
 				E50BD4C918EF3AEE0025C794 /* Frameworks */,
@@ -294,14 +294,14 @@
 			);
 			dependencies = (
 			);
-			name = MyLocationDemo;
+			name = TapThat;
 			productName = MyLocationDemo;
-			productReference = E50BD4CC18EF3AEE0025C794 /* MyLocationDemo.app */;
+			productReference = E50BD4CC18EF3AEE0025C794 /* TapThat.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E50BD4EC18EF3AEE0025C794 /* MyLocationDemoTests */ = {
+		E50BD4EC18EF3AEE0025C794 /* TapThatTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E50BD50118EF3AEE0025C794 /* Build configuration list for PBXNativeTarget "MyLocationDemoTests" */;
+			buildConfigurationList = E50BD50118EF3AEE0025C794 /* Build configuration list for PBXNativeTarget "TapThatTests" */;
 			buildPhases = (
 				E50BD4E918EF3AEE0025C794 /* Sources */,
 				E50BD4EA18EF3AEE0025C794 /* Frameworks */,
@@ -312,9 +312,9 @@
 			dependencies = (
 				E50BD4F318EF3AEE0025C794 /* PBXTargetDependency */,
 			);
-			name = MyLocationDemoTests;
+			name = TapThatTests;
 			productName = MyLocationDemoTests;
-			productReference = E50BD4ED18EF3AEE0025C794 /* MyLocationDemoTests.xctest */;
+			productReference = E50BD4ED18EF3AEE0025C794 /* TapThatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -335,7 +335,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E50BD4C718EF3AEE0025C794 /* Build configuration list for PBXProject "MyLocationDemo" */;
+			buildConfigurationList = E50BD4C718EF3AEE0025C794 /* Build configuration list for PBXProject "TapThat" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -348,8 +348,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E50BD4CB18EF3AEE0025C794 /* MyLocationDemo */,
-				E50BD4EC18EF3AEE0025C794 /* MyLocationDemoTests */,
+				E50BD4CB18EF3AEE0025C794 /* TapThat */,
+				E50BD4EC18EF3AEE0025C794 /* TapThatTests */,
 			);
 		};
 /* End PBXProject section */
@@ -418,7 +418,7 @@
 /* Begin PBXTargetDependency section */
 		E50BD4F318EF3AEE0025C794 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E50BD4CB18EF3AEE0025C794 /* MyLocationDemo */;
+			target = E50BD4CB18EF3AEE0025C794 /* TapThat */;
 			targetProxy = E50BD4F218EF3AEE0025C794 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -534,15 +534,15 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MyLocationDemo/MyLocationDemo-Prefix.pch";
-				INFOPLIST_FILE = "MyLocationDemo/MyLocationDemo-Info.plist";
+				GCC_PREFIX_HEADER = "MyLocationDemo/TapThat-Prefix.pch";
+				INFOPLIST_FILE = "MyLocationDemo/TapThat-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/nzhu94/Downloads/Parse.framework,
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BB876719-D88E-4350-8B56-5FE61CE257B2";
+				PRODUCT_NAME = TapThat;
+				PROVISIONING_PROFILE = "E404697F-B081-4703-AF8A-BED1340ADDE1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -560,15 +560,15 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MyLocationDemo/MyLocationDemo-Prefix.pch";
-				INFOPLIST_FILE = "MyLocationDemo/MyLocationDemo-Info.plist";
+				GCC_PREFIX_HEADER = "MyLocationDemo/TapThat-Prefix.pch";
+				INFOPLIST_FILE = "MyLocationDemo/TapThat-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/nzhu94/Downloads/Parse.framework,
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BB876719-D88E-4350-8B56-5FE61CE257B2";
+				PRODUCT_NAME = TapThat;
+				PROVISIONING_PROFILE = "E404697F-B081-4703-AF8A-BED1340ADDE1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -588,8 +588,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "MyLocationDemoTests/MyLocationDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "MyLocationDemoTests/TapThatTests-Info.plist";
+				PRODUCT_NAME = TapThatTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -606,8 +606,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyLocationDemo/MyLocationDemo-Prefix.pch";
-				INFOPLIST_FILE = "MyLocationDemoTests/MyLocationDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "MyLocationDemoTests/TapThatTests-Info.plist";
+				PRODUCT_NAME = TapThatTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -616,7 +616,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E50BD4C718EF3AEE0025C794 /* Build configuration list for PBXProject "MyLocationDemo" */ = {
+		E50BD4C718EF3AEE0025C794 /* Build configuration list for PBXProject "TapThat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E50BD4FC18EF3AEE0025C794 /* Debug */,
@@ -625,7 +625,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E50BD4FE18EF3AEE0025C794 /* Build configuration list for PBXNativeTarget "MyLocationDemo" */ = {
+		E50BD4FE18EF3AEE0025C794 /* Build configuration list for PBXNativeTarget "TapThat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E50BD4FF18EF3AEE0025C794 /* Debug */,
@@ -634,7 +634,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E50BD50118EF3AEE0025C794 /* Build configuration list for PBXNativeTarget "MyLocationDemoTests" */ = {
+		E50BD50118EF3AEE0025C794 /* Build configuration list for PBXNativeTarget "TapThatTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E50BD50218EF3AEE0025C794 /* Debug */,

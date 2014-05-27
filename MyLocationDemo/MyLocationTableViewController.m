@@ -54,6 +54,12 @@ static int MAP = 1;
     // Do any additional setup after loading the view.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [NSThread detachNewThreadSelector:@selector(configureReports) toTarget:self withObject:nil];
+}
+
 -(void)configureReports
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Report"];
@@ -62,7 +68,13 @@ static int MAP = 1;
     NSMutableSet *uniqueReportSet = [[NSMutableSet alloc] init];
     // gather all the unique report names
     for (PFObject *report in self.reportArray) {
-        [uniqueReportSet addObject:report[@"event"]];
+        NSString *event = report[@"event"];
+        event = [event lowercaseString];
+        NSError *error = nil;
+        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"  +" options:NSRegularExpressionCaseInsensitive error:&error];
+        NSString *normalizedString = [regex stringByReplacingMatchesInString:event options:0 range:NSMakeRange(0, [event length]) withTemplate:@" "];
+        report[@"event"] = normalizedString;
+        [uniqueReportSet addObject:normalizedString];
     }
     NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"description" ascending:YES];
     self.uniqueReportNames = [NSMutableArray arrayWithArray:[uniqueReportSet sortedArrayUsingDescriptors:@[sort]]];
