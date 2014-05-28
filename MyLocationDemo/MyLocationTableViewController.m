@@ -195,9 +195,10 @@ static int MAP = 1;
     
     if (self.reportMapSegmentControl.selectedSegmentIndex == REPORT) {
         self.titleText.text = @"Select something you want to track";
-        
+        self.reportTextField.placeholder = @"enter something to search or add";
     } else if (self.reportMapSegmentControl.selectedSegmentIndex == MAP) {
         self.titleText.text = @"Select something to see on the map";
+        self.reportTextField.placeholder = @"enter something to search";
     }
     if ([self.selectedEvent length] > 0) {
         self.titleText.text = [NSString stringWithFormat:@"Currently Tracking: %@", self.selectedEvent];
