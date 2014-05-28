@@ -36,6 +36,11 @@
     NSLog(@"started knock detection");
 }
 
+- (void)stopTrackingLocation
+{
+    [locationManager stopUpdatingLocation];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -132,7 +137,7 @@
 
 - (void) viewWillDisappear:(BOOL)animated
 {
-    [self.theDetector.listener stopCollectingMotionInformation];
+    //[self.theDetector.listener stopCollectingMotionInformation];
 }
 
 #pragma mark - CLLocationManagerDelegate

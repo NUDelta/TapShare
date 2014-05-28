@@ -45,11 +45,6 @@ static int HIDE = 1;
     [self.everyoneElseSegmentControl addTarget:self
                                     action:@selector(updateUI)
                           forControlEvents:UIControlEventValueChanged];
-    
-    [[UISegmentedControl appearance] setTitleTextAttributes:@{
-                                                              NSForegroundColorAttributeName : [UIColor whiteColor]
-                                                              } forState:UIControlStateNormal];
-    NSLog(@"%@", self.reportType);
 }
 
 -(void)viewWillAppear:(BOOL)animated

@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *reportTextField;
 @property (strong, nonatomic) NSString *customEvent;
 @property (strong, nonatomic) NSString *selectedEvent;
+@property (strong, nonatomic) KnockViewController *knockViewController;
 
 @end
 
@@ -58,6 +59,9 @@ static int MAP = 1;
 {
     [super viewWillAppear:animated];
     [NSThread detachNewThreadSelector:@selector(configureReports) toTarget:self withObject:nil];
+    [self updateUI];
+    self.reportMapSegmentControl.backgroundColor = [UIColor whiteColor];
+    self.reportMapSegmentControl.tintColor = [UIColor blackColor];
 }
 
 -(void)configureReports
@@ -106,25 +110,27 @@ static int MAP = 1;
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ( self.reportMapSegmentControl.selectedSegmentIndex == REPORT ) {
+        
+        KnockViewController *controller = (KnockViewController *)segue.destinationViewController;
         if ([segue.identifier isEqualToString:@"PrepareToReport"]) {
-            KnockViewController *controller = (KnockViewController *)segue.destinationViewController;
             NSString *eventName = [self.autocompleteNames objectAtIndex:self.reportTableView.indexPathForSelectedRow.row];
             //NSLog(@"%@", eventName);
             controller.eventName = eventName;
         } else if ([segue.identifier isEqualToString:@"CustomReport"]) {
-            KnockViewController *controller = (KnockViewController *)segue.destinationViewController;
             controller.eventName = self.customEvent;
         }
+        self.knockViewController = controller;
+        
     } else if (self.reportMapSegmentControl.selectedSegmentIndex == MAP) {
         if ([segue.identifier isEqualToString:@"ViewMap"]) {
             MyLocationMapViewController *controller = (MyLocationMapViewController *)segue.destinationViewController;
             NSMutableArray *specificReportArray = [[NSMutableArray alloc] init];
             for (PFObject *report in self.reportArray) {
-                if ([self.selectedEvent isEqualToString:report[@"event"]]) {
+                if ([sender isEqualToString:report[@"event"]]) {
                     [specificReportArray addObject:report];
                 }
             }
-            controller.reportType = self.selectedEvent;
+            controller.reportType = sender;
             controller.reportArray = specificReportArray;
         }
         
@@ -181,10 +187,20 @@ static int MAP = 1;
 
 - (void)reportMapSegmentControlChanged
 {
+    [self updateUI];
+}
+
+- (void)updateUI
+{
+    
     if (self.reportMapSegmentControl.selectedSegmentIndex == REPORT) {
         self.titleText.text = @"Select something you want to track";
+        
     } else if (self.reportMapSegmentControl.selectedSegmentIndex == MAP) {
         self.titleText.text = @"Select something to see on the map";
+    }
+    if ([self.selectedEvent length] > 0) {
+        self.titleText.text = [NSString stringWithFormat:@"Currently Tracking: %@", self.selectedEvent];
     }
     [self.reportTableView reloadData];
 }
@@ -193,11 +209,20 @@ static int MAP = 1;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedEvent = self.autocompleteNames[indexPath.row];
     if (self.reportMapSegmentControl.selectedSegmentIndex == REPORT) {
+        if ([self.selectedEvent isEqualToString:self.autocompleteNames[indexPath.row]]) {
+            if (self.knockViewController) {
+                [self.knockViewController.theDetector.listener stopCollectingMotionInformation];
+                [self.knockViewController stopTrackingLocation];
+                self.selectedEvent = nil;
+                [self updateUI];
+                return;
+            }
+        }
+        self.selectedEvent = self.autocompleteNames[indexPath.row];
         [self performSegueWithIdentifier:@"PrepareToReport" sender:self];
     } else if (self.reportMapSegmentControl.selectedSegmentIndex == MAP) {
-        [self performSegueWithIdentifier:@"ViewMap" sender:self];
+        [self performSegueWithIdentifier:@"ViewMap" sender:self.autocompleteNames[indexPath.row]];
     }
 }
 
@@ -208,6 +233,7 @@ static int MAP = 1;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReportCell"];
     NSString *eventText = [self.autocompleteNames objectAtIndex:indexPath.row];
     cell.textLabel.text = eventText;
+    cell.backgroundColor = [UIColor whiteColor];
     if (self.reportMapSegmentControl.selectedSegmentIndex == MAP) {
         int numberReports = 0;
         for (PFObject *report in self.reportArray) {
@@ -218,7 +244,14 @@ static int MAP = 1;
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%d Reports", numberReports];
     } else if (self.reportMapSegmentControl.selectedSegmentIndex == REPORT) {
         cell.detailTextLabel.text = @"Track This!";
+        if ([eventText isEqualToString:self.selectedEvent]) {
+            cell.backgroundColor = [UIColor colorWithRed:154.0/255 green:200.0/255 blue:255.0/255 alpha:1];
+            cell.detailTextLabel.text = @"Stop Tracking";
+        }
     }
+    
+    // highlight the current tracking item
+
     return cell;
 }
 

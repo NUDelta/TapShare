@@ -18,4 +18,5 @@
 @property (strong, nonatomic) NSString *eventName;
 @property (strong, nonatomic) IBOutlet UILabel *reportType;
 - (void)saveReport;
+- (void)stopTrackingLocation;
 @end

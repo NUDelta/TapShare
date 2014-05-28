@@ -49,11 +49,22 @@
     [self.emailField resignFirstResponder];
     [self.nameField resignFirstResponder];
     if ([segue.identifier isEqualToString:@"login"]) {
-        PFUser *user = [PFUser user];
-        user.username = self.emailField.text;
-        user.password = @"";
-        user[@"name"] = self.nameField.text;
-        [user signUpInBackground];
+        PFQuery *userQuery = [PFUser query];
+        [userQuery whereKey:@"username" equalTo:self.emailField.text];
+        [userQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                if ([objects count] == 0) {
+                    PFUser *user = [PFUser user];
+                    user.username = self.emailField.text;
+                    user.password = @"";
+                    user[@"name"] = self.nameField.text;
+                    [user signUpInBackground];
+                }
+                else {
+                    [PFUser logInWithUsername:self.emailField.text password:@""];
+                }
+            }
+        }];
     }
 }
 
