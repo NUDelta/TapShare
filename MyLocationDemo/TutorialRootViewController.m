@@ -26,8 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _pageTitles = @[@"Screen 1", @"Screen 2", @"Screen 3", @"Screen 4", @"Screen 5"];
-    _pageImages = @[@"page1.png", @"page2.png", @"page3.png", @"page4.png",  @"page5.png"];
+    _pageTitles = @[@"Screen 1", @"Screen 2", @"Screen 3", @"Screen 4", @"Screen 5", @"Screen 6"];
+    _pageImages = @[@"page1.png", @"page2.png", @"page3.png", @"page4.png",  @"page5.png", @"page6.png"];
     
     // create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];

@@ -40,6 +40,7 @@
 		E56B38651900E91B007A71E5 /* KnockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B38641900E91B007A71E5 /* KnockViewController.m */; };
 		E56B386819010974007A71E5 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B386719010974007A71E5 /* SubmitViewController.m */; };
 		E586933918F7AEB200573E37 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E586933818F7AEB200573E37 /* MapKit.framework */; };
+		E5AA896A1936B3040033C0FC /* page6.png in Resources */ = {isa = PBXBuildFile; fileRef = E5AA89691936B3040033C0FC /* page6.png */; };
 		E5BAFC74192EDE560045EC72 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BAFC73192EDE560045EC72 /* TutorialViewController.m */; };
 		E5BAFC7A192EE7390045EC72 /* TutorialRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BAFC79192EE7390045EC72 /* TutorialRootViewController.m */; };
 		E5BAFC97192F25A20045EC72 /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BAFC93192F25A20045EC72 /* page1.png */; };
@@ -111,6 +112,7 @@
 		E56B386619010974007A71E5 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
 		E56B386719010974007A71E5 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
 		E586933818F7AEB200573E37 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E5AA89691936B3040033C0FC /* page6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page6.png; sourceTree = "<group>"; };
 		E5BAFC72192EDE560045EC72 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
 		E5BAFC73192EDE560045EC72 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		E5BAFC78192EE7390045EC72 /* TutorialRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialRootViewController.h; sourceTree = "<group>"; };
@@ -208,11 +210,12 @@
 			isa = PBXGroup;
 			children = (
 				E5BAFC9F192F284C0045EC72 /* button.png */,
-				E5BAFCA0192F284C0045EC72 /* page5.png */,
 				E5BAFC93192F25A20045EC72 /* page1.png */,
 				E5BAFC94192F25A20045EC72 /* page2.png */,
 				E5BAFC95192F25A20045EC72 /* page3.png */,
 				E5BAFC96192F25A20045EC72 /* page4.png */,
+				E5BAFCA0192F284C0045EC72 /* page5.png */,
+				E5AA89691936B3040033C0FC /* page6.png */,
 				E50BD4DE18EF3AEE0025C794 /* MyLocationAppDelegate.h */,
 				E50BD4DF18EF3AEE0025C794 /* MyLocationAppDelegate.m */,
 				E50BD4E118EF3AEE0025C794 /* Main.storyboard */,
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E50BD4E818EF3AEE0025C794 /* Images.xcassets in Resources */,
+				E5AA896A1936B3040033C0FC /* page6.png in Resources */,
 				E5BAFCA1192F284C0045EC72 /* button.png in Resources */,
 				E50BD4DA18EF3AEE0025C794 /* InfoPlist.strings in Resources */,
 				E5BAFC99192F25A20045EC72 /* page3.png in Resources */,
