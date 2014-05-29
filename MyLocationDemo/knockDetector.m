@@ -121,7 +121,7 @@ double normAll(double x, double y, double z) {
     if (odds > 0.999) {
        // NSLog(@"%f", odds);
     }
-    return ((odds > 0.6) || [self satisfiesTableKnockThresholds]) && lastDoubleKnockTimeDifference > 1 && lastKnockTimeDifference > 0.15 && normedAccel < 0.008;
+    return ((odds > 0.58) || [self satisfiesTableKnockThresholds]) && lastDoubleKnockTimeDifference > 1 && lastKnockTimeDifference > 0.1 && normedAccel < 0.008;
 }
 
 - (BOOL)satisfiesTableKnockThresholds

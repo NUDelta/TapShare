@@ -366,7 +366,7 @@
                                 <rect key="frame" x="43" y="173" width="234" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.77607595398994733" blue="0.53471843705389588" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Lock your phone, run another app, whatever. Put your phone in your pocket and double tap your phone to make a report. To stop tracking, go back and hit "Stop Tracking" next to the event.</string>
+                                <string key="text">Lock your phone, run another app, whatever. Put your phone in your pocket and double tap your phone to make a report and get a confirmation alert. To stop tracking, go back and hit "Stop Tracking".</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
