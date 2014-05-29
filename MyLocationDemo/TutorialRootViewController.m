@@ -10,6 +10,7 @@
 
 @interface TutorialRootViewController ()
 
+
 @end
 
 @implementation TutorialRootViewController
@@ -113,8 +114,12 @@
     }
     
     index++;
+
     if (index == [self.pageTitles count]) {
-        controller.beginButton.hidden = NO;
+        controller.actionLabel.hidden = NO;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            controller.beginButton.hidden = NO;
+        });
         return nil;
     }
     return [self viewControllerAtIndex:index];

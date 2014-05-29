@@ -116,7 +116,8 @@ double normAll(double x, double y, double z) {
     float lastKnockTimeDifference = fabsf(currentDeviceMotion.timestamp - lastKnockTime);
     //return jounce > 2 && jerk > .01 && normedAccel < 0.01 && normedRotation < 1 && lastDoubleKnockTimeDifference > 1 && lastKnockTimeDifference > 0.1;
     //float total = (jounce * 0.33) + (jerk * 9.94) - (normedRotation * 0.84) + (normedAccel * 548.18) - 1.51;
-    float total = -0.42 + (normedAccel * 296.13) - (jounce * 0.02);
+    //float total = -0.42 + (normedAccel * 296.13) - (jounce * 0.02);
+    float total = -0.22 + (0.03 * jounce) - (normedRotation * 0.08);
     float odds = 1 / (1 + exp(-total));
     if (odds > 0.999) {
        // NSLog(@"%f", odds);

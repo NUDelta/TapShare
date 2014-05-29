@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DC07F319192697A10008BA21 /* MyLocationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC07F318192697A10008BA21 /* MyLocationTableViewController.m */; };
 		DC12EBA4193697BB00AE01A4 /* short_double_low.wav in Resources */ = {isa = PBXBuildFile; fileRef = DC12EBA3193697BB00AE01A4 /* short_double_low.wav */; };
+		DC12EBA61936B53400AE01A4 /* page7.png in Resources */ = {isa = PBXBuildFile; fileRef = DC12EBA51936B53400AE01A4 /* page7.png */; };
+		DC12EBA81936B65D00AE01A4 /* demoVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DC12EBA71936B65D00AE01A4 /* demoVideo.mp4 */; };
 		DC6AE9EE192C62E100382D34 /* MyLocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AE9ED192C62E100382D34 /* MyLocationMapViewController.m */; };
 		DC6AE9F1192C712400382D34 /* MyLocationLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AE9F0192C712400382D34 /* MyLocationLoginViewController.m */; };
 		E50AC9E3191AEC9D00A3556A /* KBKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AC9E0191AEC9D00A3556A /* KBKeyboardHandler.m */; };
@@ -69,6 +71,8 @@
 		DC07F317192697A10008BA21 /* MyLocationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationTableViewController.h; sourceTree = "<group>"; };
 		DC07F318192697A10008BA21 /* MyLocationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocationTableViewController.m; sourceTree = "<group>"; };
 		DC12EBA3193697BB00AE01A4 /* short_double_low.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = short_double_low.wav; sourceTree = "<group>"; };
+		DC12EBA51936B53400AE01A4 /* page7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page7.png; sourceTree = "<group>"; };
+		DC12EBA71936B65D00AE01A4 /* demoVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = demoVideo.mp4; sourceTree = "<group>"; };
 		DC6AE9EC192C62E100382D34 /* MyLocationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationMapViewController.h; sourceTree = "<group>"; };
 		DC6AE9ED192C62E100382D34 /* MyLocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocationMapViewController.m; sourceTree = "<group>"; };
 		DC6AE9EF192C712400382D34 /* MyLocationLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationLoginViewController.h; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 				E5BAFC96192F25A20045EC72 /* page4.png */,
 				E5BAFCA0192F284C0045EC72 /* page5.png */,
 				E5AA89691936B3040033C0FC /* page6.png */,
+				DC12EBA51936B53400AE01A4 /* page7.png */,
 				E50BD4DE18EF3AEE0025C794 /* MyLocationAppDelegate.h */,
 				E50BD4DF18EF3AEE0025C794 /* MyLocationAppDelegate.m */,
 				E50BD4E118EF3AEE0025C794 /* Main.storyboard */,
@@ -241,6 +246,7 @@
 				E516CB4A18F71D17000334C3 /* EventViewController.m */,
 				E56B38631900E91B007A71E5 /* KnockViewController.h */,
 				E56B38641900E91B007A71E5 /* KnockViewController.m */,
+				DC12EBA71936B65D00AE01A4 /* demoVideo.mp4 */,
 				DC12EBA3193697BB00AE01A4 /* short_double_low.wav */,
 				E50AC9E5191AF0CF00A3556A /* coreMotionListener.h */,
 				E50AC9E6191AF0CF00A3556A /* coreMotionListener.m */,
@@ -372,7 +378,9 @@
 				E5BAFC99192F25A20045EC72 /* page3.png in Resources */,
 				E5BAFC9A192F25A20045EC72 /* page4.png in Resources */,
 				DC12EBA4193697BB00AE01A4 /* short_double_low.wav in Resources */,
+				DC12EBA81936B65D00AE01A4 /* demoVideo.mp4 in Resources */,
 				E5BAFCA2192F284C0045EC72 /* page5.png in Resources */,
+				DC12EBA61936B53400AE01A4 /* page7.png in Resources */,
 				E5BAFC97192F25A20045EC72 /* page1.png in Resources */,
 				E50BD4E318EF3AEE0025C794 /* Main.storyboard in Resources */,
 				E5BAFC98192F25A20045EC72 /* page2.png in Resources */,
