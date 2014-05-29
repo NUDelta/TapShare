@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC07F319192697A10008BA21 /* MyLocationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC07F318192697A10008BA21 /* MyLocationTableViewController.m */; };
+		DC12EBA4193697BB00AE01A4 /* short_double_low.wav in Resources */ = {isa = PBXBuildFile; fileRef = DC12EBA3193697BB00AE01A4 /* short_double_low.wav */; };
 		DC6AE9EE192C62E100382D34 /* MyLocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AE9ED192C62E100382D34 /* MyLocationMapViewController.m */; };
 		DC6AE9F1192C712400382D34 /* MyLocationLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6AE9F0192C712400382D34 /* MyLocationLoginViewController.m */; };
 		E50AC9E3191AEC9D00A3556A /* KBKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AC9E0191AEC9D00A3556A /* KBKeyboardHandler.m */; };
@@ -66,6 +67,7 @@
 /* Begin PBXFileReference section */
 		DC07F317192697A10008BA21 /* MyLocationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationTableViewController.h; sourceTree = "<group>"; };
 		DC07F318192697A10008BA21 /* MyLocationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocationTableViewController.m; sourceTree = "<group>"; };
+		DC12EBA3193697BB00AE01A4 /* short_double_low.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = short_double_low.wav; sourceTree = "<group>"; };
 		DC6AE9EC192C62E100382D34 /* MyLocationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationMapViewController.h; sourceTree = "<group>"; };
 		DC6AE9ED192C62E100382D34 /* MyLocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocationMapViewController.m; sourceTree = "<group>"; };
 		DC6AE9EF192C712400382D34 /* MyLocationLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationLoginViewController.h; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				E516CB4A18F71D17000334C3 /* EventViewController.m */,
 				E56B38631900E91B007A71E5 /* KnockViewController.h */,
 				E56B38641900E91B007A71E5 /* KnockViewController.m */,
+				DC12EBA3193697BB00AE01A4 /* short_double_low.wav */,
 				E50AC9E5191AF0CF00A3556A /* coreMotionListener.h */,
 				E50AC9E6191AF0CF00A3556A /* coreMotionListener.m */,
 				E5C20D5A191AF0FB00C4DCF0 /* knockDetector.h */,
@@ -364,6 +367,7 @@
 				E50BD4DA18EF3AEE0025C794 /* InfoPlist.strings in Resources */,
 				E5BAFC99192F25A20045EC72 /* page3.png in Resources */,
 				E5BAFC9A192F25A20045EC72 /* page4.png in Resources */,
+				DC12EBA4193697BB00AE01A4 /* short_double_low.wav in Resources */,
 				E5BAFCA2192F284C0045EC72 /* page5.png in Resources */,
 				E5BAFC97192F25A20045EC72 /* page1.png in Resources */,
 				E50BD4E318EF3AEE0025C794 /* Main.storyboard in Resources */,
@@ -542,7 +546,7 @@
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
 				PRODUCT_NAME = TapThat;
-				PROVISIONING_PROFILE = "BB876719-D88E-4350-8B56-5FE61CE257B2";
+				PROVISIONING_PROFILE = "E404697F-B081-4703-AF8A-BED1340ADDE1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -568,7 +572,7 @@
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
 				PRODUCT_NAME = TapThat;
-				PROVISIONING_PROFILE = "BB876719-D88E-4350-8B56-5FE61CE257B2";
+				PROVISIONING_PROFILE = "E404697F-B081-4703-AF8A-BED1340ADDE1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

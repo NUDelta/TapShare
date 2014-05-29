@@ -71,7 +71,6 @@
     
     //[self performSegueWithIdentifier:@"reportSuccess" sender:self];
     [self saveReport];
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     
     NSLog(@"Latitude: %f", latitude);
     NSLog(@"Longitude: %f", longitude);
@@ -79,8 +78,7 @@
     
     UILocalNotification *notification = [[UILocalNotification alloc] init];
     notification.alertBody = [NSString stringWithFormat:@"You reported: %@", self.eventName];
-    AudioServicesPlaySystemSound(0x450);
-    notification.soundName = @"";
+    notification.soundName = @"short_double_low.wav";
     [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
     
     /*CLLocation *location = [locationManager location];
