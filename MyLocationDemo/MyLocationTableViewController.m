@@ -48,6 +48,9 @@ static int MAP = 1;
     self.reportTextField.delegate = self;
     //keyboard = [[KBKeyboardHandler alloc] init];
     //keyboard.delegate = self;
+    self.autocompleteNames = [[NSMutableArray alloc] init];
+    self.reportTableView.delegate = self;
+    self.reportTableView.dataSource = self;
     [NSThread detachNewThreadSelector:@selector(configureReports) toTarget:self withObject:nil];
     [self.reportMapSegmentControl addTarget:self
                          action:@selector(reportMapSegmentControlChanged)
@@ -68,25 +71,28 @@ static int MAP = 1;
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Report"];
     [query setLimit:1000];
-    self.reportArray = [query findObjects];
-    NSMutableSet *uniqueReportSet = [[NSMutableSet alloc] init];
-    // gather all the unique report names
-    for (PFObject *report in self.reportArray) {
-        NSString *event = report[@"event"];
-        event = [event lowercaseString];
-        NSError *error = nil;
-        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"  +" options:NSRegularExpressionCaseInsensitive error:&error];
-        NSString *normalizedString = [regex stringByReplacingMatchesInString:event options:0 range:NSMakeRange(0, [event length]) withTemplate:@" "];
-        report[@"event"] = normalizedString;
-        [uniqueReportSet addObject:normalizedString];
-    }
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"description" ascending:YES];
-    self.uniqueReportNames = [NSMutableArray arrayWithArray:[uniqueReportSet sortedArrayUsingDescriptors:@[sort]]];
-    self.autocompleteNames = [NSMutableArray arrayWithArray:self.uniqueReportNames];
-    if (self.reportTextField.text.length > 0) {
-        [self searchAutocompleteEntriesWithSubstring:self.reportTextField.text];
-    }
-    [self.reportTableView reloadData];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.reportArray = objects;
+        NSMutableSet *uniqueReportSet = [[NSMutableSet alloc] init];
+        // gather all the unique report names
+        for (PFObject *report in self.reportArray) {
+            NSString *event = report[@"event"];
+            event = [event lowercaseString];
+            NSError *error = nil;
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"  +" options:NSRegularExpressionCaseInsensitive error:&error];
+            NSString *normalizedString = [regex stringByReplacingMatchesInString:event options:0 range:NSMakeRange(0, [event length]) withTemplate:@" "];
+            report[@"event"] = normalizedString;
+            [uniqueReportSet addObject:normalizedString];
+        }
+        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"description" ascending:YES];
+        self.uniqueReportNames = [NSMutableArray arrayWithArray:[uniqueReportSet sortedArrayUsingDescriptors:@[sort]]];
+        self.autocompleteNames = [NSMutableArray arrayWithArray:self.uniqueReportNames];
+        if (self.reportTextField.text.length > 0) {
+            [self searchAutocompleteEntriesWithSubstring:self.reportTextField.text];
+        }
+        [self.reportTableView reloadData];
+
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -143,6 +149,13 @@ static int MAP = 1;
     NSString *substring = [NSString stringWithString:textField.text];
     substring = [substring stringByReplacingCharactersInRange:range withString:string];
     [self searchAutocompleteEntriesWithSubstring:substring];
+    return YES;
+}
+
+-(BOOL)textFieldShouldClear:(UITextField *)textField
+{
+    self.autocompleteNames = [NSMutableArray arrayWithArray:self.uniqueReportNames];
+    [self.reportTableView reloadData];
     return YES;
 }
 

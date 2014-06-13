@@ -174,8 +174,8 @@
 		E50BD4C318EF3AEE0025C794 = {
 			isa = PBXGroup;
 			children = (
-				E50BD4D518EF3AEE0025C794 /* MyLocationDemo */,
-				E50BD4F418EF3AEE0025C794 /* MyLocationDemoTests */,
+				E50BD4D518EF3AEE0025C794 /* TapThat */,
+				E50BD4F418EF3AEE0025C794 /* TapThatTests */,
 				E50BD4CE18EF3AEE0025C794 /* Frameworks */,
 				E50BD4CD18EF3AEE0025C794 /* Products */,
 			);
@@ -212,7 +212,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E50BD4D518EF3AEE0025C794 /* MyLocationDemo */ = {
+		E50BD4D518EF3AEE0025C794 /* TapThat */ = {
 			isa = PBXGroup;
 			children = (
 				E5BAFC9F192F284C0045EC72 /* button.png */,
@@ -259,6 +259,7 @@
 				E50BD4E718EF3AEE0025C794 /* Images.xcassets */,
 				E50BD4D618EF3AEE0025C794 /* Supporting Files */,
 			);
+			name = TapThat;
 			path = MyLocationDemo;
 			sourceTree = "<group>";
 		};
@@ -273,12 +274,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E50BD4F418EF3AEE0025C794 /* MyLocationDemoTests */ = {
+		E50BD4F418EF3AEE0025C794 /* TapThatTests */ = {
 			isa = PBXGroup;
 			children = (
 				E50BD4FA18EF3AEE0025C794 /* MyLocationDemoTests.m */,
 				E50BD4F518EF3AEE0025C794 /* Supporting Files */,
 			);
+			name = TapThatTests;
 			path = MyLocationDemoTests;
 			sourceTree = "<group>";
 		};
@@ -558,7 +560,7 @@
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
 				PRODUCT_NAME = TapThat;
-				PROVISIONING_PROFILE = "E404697F-B081-4703-AF8A-BED1340ADDE1";
+				PROVISIONING_PROFILE = "BB876719-D88E-4350-8B56-5FE61CE257B2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -584,7 +586,7 @@
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
 				PRODUCT_NAME = TapThat;
-				PROVISIONING_PROFILE = "E404697F-B081-4703-AF8A-BED1340ADDE1";
+				PROVISIONING_PROFILE = "BB876719-D88E-4350-8B56-5FE61CE257B2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

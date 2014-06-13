@@ -81,6 +81,8 @@
     notification.soundName = @"short_double_low.wav";
     [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
     
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    
     /*CLLocation *location = [locationManager location];
     CLLocationCoordinate2D coordinate = [location coordinate];
     PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
