@@ -1,9 +1,14 @@
-pgp-location
+TapShare (formerly TapThat)
 ============
 
-Mobile app prototype logging civic data with location
+A mobile app that lets you tap twice on your phone to make a report. Used as a prototype to demonstrate the feasibility of low-effort crowdsourcing.
 
-1. What would you like to report? (i.e. pothole, no curb ramp)
-2. Knock on screen to record event
-3. Report received (stores event and geolocation to Parse, plots it on map)
-4. (Future) Data on Parse visualized on companion website
+To run our app:
+
+1. Download Xcode 5.1, if you have not already
+2. Clone the repository where you plan to store it
+3. Open up TapThat.xcodeproj
+4. Edit the files or build on your phone
+
+File Descriptions
+
