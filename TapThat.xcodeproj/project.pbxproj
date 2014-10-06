@@ -83,7 +83,7 @@
 		E50AC9E2191AEC9D00A3556A /* KBKeyboardHandlerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBKeyboardHandlerDelegate.m; sourceTree = "<group>"; };
 		E50AC9E5191AF0CF00A3556A /* coreMotionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coreMotionListener.h; sourceTree = "<group>"; };
 		E50AC9E6191AF0CF00A3556A /* coreMotionListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coreMotionListener.m; sourceTree = "<group>"; };
-		E50BD4CC18EF3AEE0025C794 /* TapThat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapThat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50BD4CC18EF3AEE0025C794 /* TapShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50BD4CF18EF3AEE0025C794 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E50BD4D118EF3AEE0025C794 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E50BD4D318EF3AEE0025C794 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -184,7 +184,7 @@
 		E50BD4CD18EF3AEE0025C794 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E50BD4CC18EF3AEE0025C794 /* TapThat.app */,
+				E50BD4CC18EF3AEE0025C794 /* TapShare.app */,
 				E50BD4ED18EF3AEE0025C794 /* TapThatTests.xctest */,
 			);
 			name = Products;
@@ -310,7 +310,7 @@
 			);
 			name = TapThat;
 			productName = MyLocationDemo;
-			productReference = E50BD4CC18EF3AEE0025C794 /* TapThat.app */;
+			productReference = E50BD4CC18EF3AEE0025C794 /* TapShare.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E50BD4EC18EF3AEE0025C794 /* TapThatTests */ = {
@@ -559,8 +559,8 @@
 					/Users/nzhu94/Downloads/Parse.framework,
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
-				PRODUCT_NAME = TapThat;
-				PROVISIONING_PROFILE = "BB876719-D88E-4350-8B56-5FE61CE257B2";
+				PRODUCT_NAME = TapShare;
+				PROVISIONING_PROFILE = "A4F57F32-1848-42F7-B6E2-C74C72B32767";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -585,8 +585,8 @@
 					/Users/nzhu94/Downloads/Parse.framework,
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
-				PRODUCT_NAME = TapThat;
-				PROVISIONING_PROFILE = "BB876719-D88E-4350-8B56-5FE61CE257B2";
+				PRODUCT_NAME = TapShare;
+				PROVISIONING_PROFILE = "A4F57F32-1848-42F7-B6E2-C74C72B32767";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
