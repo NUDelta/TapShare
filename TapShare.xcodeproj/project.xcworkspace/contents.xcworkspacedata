@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TapThat.xcodeproj">
+      location = "self:TapShare.xcodeproj">
    </FileRef>
 </Workspace>

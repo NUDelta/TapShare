@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E50BD4CB18EF3AEE0025C794"
                BuildableName = "TapShare.app"
-               BlueprintName = "TapThat"
+               BlueprintName = "TapShare"
                ReferencedContainer = "container:TapThat.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E50BD4EC18EF3AEE0025C794"
-               BuildableName = "TapThatTests.xctest"
-               BlueprintName = "TapThatTests"
+               BuildableName = "TapShareTests.xctest"
+               BlueprintName = "TapShareTests"
                ReferencedContainer = "container:TapThat.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E50BD4CB18EF3AEE0025C794"
             BuildableName = "TapShare.app"
-            BlueprintName = "TapThat"
+            BlueprintName = "TapShare"
             ReferencedContainer = "container:TapThat.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E50BD4CB18EF3AEE0025C794"
             BuildableName = "TapShare.app"
-            BlueprintName = "TapThat"
+            BlueprintName = "TapShare"
             ReferencedContainer = "container:TapThat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -81,7 +81,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E50BD4CB18EF3AEE0025C794"
             BuildableName = "TapShare.app"
-            BlueprintName = "TapThat"
+            BlueprintName = "TapShare"
             ReferencedContainer = "container:TapThat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
