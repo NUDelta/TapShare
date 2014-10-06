@@ -171,6 +171,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC391A4519E338170023D959 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E516CB4918F71D17000334C3 /* EventViewController.h */,
+				E516CB4A18F71D17000334C3 /* EventViewController.m */,
+				E56B38631900E91B007A71E5 /* KnockViewController.h */,
+				E56B38641900E91B007A71E5 /* KnockViewController.m */,
+				E56B386619010974007A71E5 /* SubmitViewController.h */,
+				E56B386719010974007A71E5 /* SubmitViewController.m */,
+				E5CBAE8B1900B33B00C4001F /* ReportsViewController.h */,
+				E5CBAE8C1900B33B00C4001F /* ReportsViewController.m */,
+				E5BAFC78192EE7390045EC72 /* TutorialRootViewController.h */,
+				E5BAFC79192EE7390045EC72 /* TutorialRootViewController.m */,
+				E5BAFC72192EDE560045EC72 /* TutorialViewController.h */,
+				E5BAFC73192EDE560045EC72 /* TutorialViewController.m */,
+				DC6AE9EF192C712400382D34 /* MyLocationLoginViewController.h */,
+				DC6AE9F0192C712400382D34 /* MyLocationLoginViewController.m */,
+				DC07F317192697A10008BA21 /* MyLocationTableViewController.h */,
+				DC07F318192697A10008BA21 /* MyLocationTableViewController.m */,
+				DC6AE9EC192C62E100382D34 /* MyLocationMapViewController.h */,
+				DC6AE9ED192C62E100382D34 /* MyLocationMapViewController.m */,
+				E50BD4E418EF3AEE0025C794 /* MyLocationViewController.h */,
+				E50BD4E518EF3AEE0025C794 /* MyLocationViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DC391A4619E338380023D959 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E50AC9DF191AEC9D00A3556A /* KBKeyboardHandler.h */,
+				E50AC9E0191AEC9D00A3556A /* KBKeyboardHandler.m */,
+				E50AC9E1191AEC9D00A3556A /* KBKeyboardHandlerDelegate.h */,
+				E50AC9E2191AEC9D00A3556A /* KBKeyboardHandlerDelegate.m */,
+				E50AC9E5191AF0CF00A3556A /* coreMotionListener.h */,
+				E50AC9E6191AF0CF00A3556A /* coreMotionListener.m */,
+				E5C20D5A191AF0FB00C4DCF0 /* knockDetector.h */,
+				E5C20D5B191AF0FB00C4DCF0 /* knockDetector.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DC391A4719E338560023D959 /* Image Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5BAFC9F192F284C0045EC72 /* button.png */,
+				E5BAFC93192F25A20045EC72 /* page1.png */,
+				E5BAFC94192F25A20045EC72 /* page2.png */,
+				E5BAFC95192F25A20045EC72 /* page3.png */,
+				E5BAFC96192F25A20045EC72 /* page4.png */,
+				E5BAFCA0192F284C0045EC72 /* page5.png */,
+				E5AA89691936B3040033C0FC /* page6.png */,
+				DC12EBA51936B53400AE01A4 /* page7.png */,
+			);
+			name = "Image Files";
+			sourceTree = "<group>";
+		};
 		E50BD4C318EF3AEE0025C794 = {
 			isa = PBXGroup;
 			children = (
@@ -215,47 +272,14 @@
 		E50BD4D518EF3AEE0025C794 /* TapThat */ = {
 			isa = PBXGroup;
 			children = (
-				E5BAFC9F192F284C0045EC72 /* button.png */,
-				E5BAFC93192F25A20045EC72 /* page1.png */,
-				E5BAFC94192F25A20045EC72 /* page2.png */,
-				E5BAFC95192F25A20045EC72 /* page3.png */,
-				E5BAFC96192F25A20045EC72 /* page4.png */,
-				E5BAFCA0192F284C0045EC72 /* page5.png */,
-				E5AA89691936B3040033C0FC /* page6.png */,
-				DC12EBA51936B53400AE01A4 /* page7.png */,
+				DC391A4719E338560023D959 /* Image Files */,
 				E50BD4DE18EF3AEE0025C794 /* MyLocationAppDelegate.h */,
 				E50BD4DF18EF3AEE0025C794 /* MyLocationAppDelegate.m */,
 				E50BD4E118EF3AEE0025C794 /* Main.storyboard */,
-				E5BAFC78192EE7390045EC72 /* TutorialRootViewController.h */,
-				E5BAFC79192EE7390045EC72 /* TutorialRootViewController.m */,
-				E5BAFC72192EDE560045EC72 /* TutorialViewController.h */,
-				E5BAFC73192EDE560045EC72 /* TutorialViewController.m */,
-				DC6AE9EF192C712400382D34 /* MyLocationLoginViewController.h */,
-				DC6AE9F0192C712400382D34 /* MyLocationLoginViewController.m */,
-				DC07F317192697A10008BA21 /* MyLocationTableViewController.h */,
-				DC07F318192697A10008BA21 /* MyLocationTableViewController.m */,
-				DC6AE9EC192C62E100382D34 /* MyLocationMapViewController.h */,
-				DC6AE9ED192C62E100382D34 /* MyLocationMapViewController.m */,
-				E50BD4E418EF3AEE0025C794 /* MyLocationViewController.h */,
-				E50BD4E518EF3AEE0025C794 /* MyLocationViewController.m */,
-				E50AC9DF191AEC9D00A3556A /* KBKeyboardHandler.h */,
-				E50AC9E0191AEC9D00A3556A /* KBKeyboardHandler.m */,
-				E50AC9E1191AEC9D00A3556A /* KBKeyboardHandlerDelegate.h */,
-				E50AC9E2191AEC9D00A3556A /* KBKeyboardHandlerDelegate.m */,
-				E516CB4918F71D17000334C3 /* EventViewController.h */,
-				E516CB4A18F71D17000334C3 /* EventViewController.m */,
-				E56B38631900E91B007A71E5 /* KnockViewController.h */,
-				E56B38641900E91B007A71E5 /* KnockViewController.m */,
+				DC391A4519E338170023D959 /* Controllers */,
+				DC391A4619E338380023D959 /* Model */,
 				DC12EBA71936B65D00AE01A4 /* demoVideo.mp4 */,
 				DC12EBA3193697BB00AE01A4 /* short_double_low.wav */,
-				E50AC9E5191AF0CF00A3556A /* coreMotionListener.h */,
-				E50AC9E6191AF0CF00A3556A /* coreMotionListener.m */,
-				E5C20D5A191AF0FB00C4DCF0 /* knockDetector.h */,
-				E5C20D5B191AF0FB00C4DCF0 /* knockDetector.m */,
-				E56B386619010974007A71E5 /* SubmitViewController.h */,
-				E56B386719010974007A71E5 /* SubmitViewController.m */,
-				E5CBAE8B1900B33B00C4001F /* ReportsViewController.h */,
-				E5CBAE8C1900B33B00C4001F /* ReportsViewController.m */,
 				E50BD4E718EF3AEE0025C794 /* Images.xcassets */,
 				E50BD4D618EF3AEE0025C794 /* Supporting Files */,
 			);

@@ -14,7 +14,6 @@
 @protocol coreMotionListenerDelegate <NSObject>
 
 - (void)motionListener:(coreMotionListener *)listener didReceiveDeviceMotion:(CMDeviceMotion *)deviceMotion;
-//- (void)motionListener:(coreMotionListener *)listener didReceiveAccelerometerData:(CMAccelerometerData *)data;
 
 @end
 

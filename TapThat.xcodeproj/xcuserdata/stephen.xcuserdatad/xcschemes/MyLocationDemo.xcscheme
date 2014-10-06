@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E50BD4CB18EF3AEE0025C794"
-               BuildableName = "TapThat.app"
+               BuildableName = "TapShare.app"
                BlueprintName = "TapThat"
                ReferencedContainer = "container:TapThat.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E50BD4CB18EF3AEE0025C794"
-            BuildableName = "TapThat.app"
+            BuildableName = "TapShare.app"
             BlueprintName = "TapThat"
             ReferencedContainer = "container:TapThat.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E50BD4CB18EF3AEE0025C794"
-            BuildableName = "TapThat.app"
+            BuildableName = "TapShare.app"
             BlueprintName = "TapThat"
             ReferencedContainer = "container:TapThat.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E50BD4CB18EF3AEE0025C794"
-            BuildableName = "TapThat.app"
+            BuildableName = "TapShare.app"
             BlueprintName = "TapThat"
             ReferencedContainer = "container:TapThat.xcodeproj">
          </BuildableReference>

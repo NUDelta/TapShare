@@ -53,16 +53,6 @@
     self.mapView.delegate = self;
     self.mapView.userTrackingMode = YES;
     
-    /*PFQuery *query = [PFQuery queryWithClassName:@"Report"];
-    [query getObjectInBackgroundWithId:@"xWMyZ4YEGZ" block:^(PFObject *gameScore, NSError *error) {
-        // Do something with the returned PFObject in the gameScore variable.
-        NSLog(@"%@", gameScore);
-    }];
-    
-    int score = [[gameScore objectForKey:@"score"] intValue];
-    NSString *playerName = gameScore[@"playerName"];
-    BOOL cheatMode = [gameScore[@"cheatMode"] boolValue];*/
-    
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
@@ -116,9 +106,4 @@
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 @end

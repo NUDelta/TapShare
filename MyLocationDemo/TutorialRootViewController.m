@@ -46,30 +46,12 @@
     [self.pageViewController didMoveToParentViewController:self];
 }
 
-/*- (void) viewWillAppear:(BOOL)animated
-{
-    if ([PFUser currentUser] && [[PFUser currentUser] isAuthenticated]) {
-        NSLog(@"%@", [PFUser currentUser]);
-        [self performSegueWithIdentifier:@"autologin" sender:self];
-    }
-}*/
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)startWalkthrough:(id)sender {
     TutorialViewController *startingViewController = [self viewControllerAtIndex:0];
