@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>33F70517-F189-4A2F-80B6-8C27694D8B27</string>
 	<key>IDESourceControlProjectName</key>
-	<string>MyLocationDemo</string>
+	<string>TapShare</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D8411D20-2A09-49FC-9FB2-C230444F7DCA</key>
 		<string>https://github.com/NUDelta/pgp-location</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MyLocationDemo.xcodeproj/project.xcworkspace</string>
+	<string>TapShare.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D8411D20-2A09-49FC-9FB2-C230444F7DCA</key>

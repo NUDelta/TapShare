@@ -283,7 +283,6 @@
 				E50BD4E718EF3AEE0025C794 /* Images.xcassets */,
 				E50BD4D618EF3AEE0025C794 /* Supporting Files */,
 			);
-			name = TapShare;
 			path = TapShare;
 			sourceTree = "<group>";
 		};
@@ -304,7 +303,6 @@
 				E50BD4FA18EF3AEE0025C794 /* TapShareTests.m */,
 				E50BD4F518EF3AEE0025C794 /* Supporting Files */,
 			);
-			name = TapShareTests;
 			path = TapShareTests;
 			sourceTree = "<group>";
 		};
@@ -584,7 +582,7 @@
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
 				PRODUCT_NAME = TapShare;
-				PROVISIONING_PROFILE = "A4F57F32-1848-42F7-B6E2-C74C72B32767";
+				PROVISIONING_PROFILE = "3aaa91db-16c9-4940-90fb-6e2b2eb4ecce";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -610,7 +608,7 @@
 					/Users/nzhu94/Downloads/Parse.framework/Versions/1.2.19,
 				);
 				PRODUCT_NAME = TapShare;
-				PROVISIONING_PROFILE = "A4F57F32-1848-42F7-B6E2-C74C72B32767";
+				PROVISIONING_PROFILE = "3aaa91db-16c9-4940-90fb-6e2b2eb4ecce";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
