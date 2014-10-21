@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ApplicationProperties</key>
+	<dict>
+		<key>ApplicationPath</key>
+		<string>Applications/TapShare.app</string>
+		<key>CFBundleIdentifier</key>
+		<string>edu.northwestern.delta.TapShare</string>
+		<key>CFBundleShortVersionString</key>
+		<string>0.7</string>
+		<key>CFBundleVersion</key>
+		<string>10</string>
+		<key>IconPaths</key>
+		<array>
+			<string>Applications/TapShare.app/AppIcon29x29@2x.png</string>
+		</array>
+		<key>SigningIdentity</key>
+		<string>iPhone Distribution: Northwestern University</string>
+	</dict>
+	<key>ArchiveVersion</key>
+	<integer>2</integer>
+	<key>CreationDate</key>
+	<date>2014-10-10T00:12:55Z</date>
+	<key>Name</key>
+	<string>TapShare</string>
+	<key>SchemeName</key>
+	<string>TapShare</string>
+</dict>
+</plist>

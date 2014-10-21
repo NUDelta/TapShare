@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "KBKeyboardHandler.h"
 #import "KBKeyboardHandlerDelegate.h"
+#import "MyLocationAppDelegate.h"
 
 @interface MyLocationTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, KBKeyboardHandlerDelegate>
 

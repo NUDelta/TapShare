@@ -31,7 +31,6 @@
     [super viewDidLoad];
     
     self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
-    //self.titleLabel.text = self.titleText;
     self.beginButton.hidden = YES;
     self.actionLabel.hidden = YES;
     if (self.pageIndex == 5) {

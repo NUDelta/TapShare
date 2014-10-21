@@ -11,9 +11,7 @@
 
 @interface TutorialViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property NSUInteger pageIndex;
-@property (strong, nonatomic) NSString *titleText;
 @property (strong, nonatomic) NSString *imageFile;
 @property (weak, nonatomic) IBOutlet UILabel *actionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *beginButton;

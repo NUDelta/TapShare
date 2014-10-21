@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "TSTutorialRootViewController.h"
 
 @interface MyLocationAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSMutableArray *toolTipArray;
+@property BOOL toolTipsDisabled;
 
 @end

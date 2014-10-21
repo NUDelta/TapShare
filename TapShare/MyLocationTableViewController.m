@@ -55,7 +55,67 @@ static int MAP = 1;
     [self.reportMapSegmentControl addTarget:self
                          action:@selector(reportMapSegmentControlChanged)
                forControlEvents:UIControlEventValueChanged];
-    // Do any additional setup after loading the view.
+    [self displayToolTips];
+}
+
+-(void)displayToolTips
+{
+    MyLocationAppDelegate *appDelegate = (MyLocationAppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSString *currentToolTip = [appDelegate.toolTipArray firstObject];
+    if ([currentToolTip isEqualToString:@"TrackingToolTip"]) {
+        [self displayTrackingToolTip:TSAnimationForward];
+    }
+}
+
+-(void)displayTrackingToolTip:(TSAnimationDirection)direction
+{
+    //NSArray *segmentControlViewArray = [self segmentControlViewArray];
+    //UIView *firstSegment = [segmentControlViewArray firstObject];
+    
+    //firstSegment.shouldAnimate = YES;
+    self.titleText.shouldAnimate = YES;
+    //UIView *backgroundView = [[UIView alloc] initWithFrame:firstSegment.frame];
+    //UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(trackingToolTipTapped:)];
+    //[backgroundView addGestureRecognizer:gestureRecognizer];
+    //[firstSegment addSubview:backgroundView];
+    [self.titleText beginToolTipAnimation:TSAnimationForward];
+    for (UIGestureRecognizer *gestureRecognizer in self.reportMapSegmentControl.gestureRecognizers) {
+        gestureRecognizer.cancelsTouchesInView = NO;
+    }
+}
+
+-(void)trackingToolTipTapped:(UITapGestureRecognizer *)recognizer
+{
+    NSArray *segmentControlViewArray = [self segmentControlViewArray];
+    UIView *firstSegment = [segmentControlViewArray firstObject];
+    [firstSegment endToolTipAnimation];
+    
+    UIAlertView *trackingToolTip = [[UIAlertView alloc] initWithTitle:@"Tooltips" message:@"Welcome to TapShare! As you use our app, you'll get tool tips like these on how to use different functions. You can cancel them in Settings." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [trackingToolTip show];
+}
+
+-(NSArray *)segmentControlViewArray
+{
+    // WARNING: This function gets frame from UISegment objects, undocumented subviews of UISegmentedControl.
+    // May break in iOS updates.
+    // original code from http://stackoverflow.com/questions/9764804/get-frame-from-certain-uisegmentedcontrol-index
+    
+    NSMutableArray *segments = [NSMutableArray arrayWithCapacity:self.reportMapSegmentControl.numberOfSegments];
+    for (UIView *view in self.reportMapSegmentControl.subviews) {
+        if ([NSStringFromClass([view class]) isEqualToString:@"UISegment"]) {
+            [segments addObject:view];
+        }
+    }
+    
+    NSArray *sorted = [segments sortedArrayUsingComparator:^NSComparisonResult(UIView *a, UIView *b) {
+        if (a.frame.origin.x < b.frame.origin.x) {
+            return NSOrderedAscending;
+        } else if (a.frame.origin.x > b.frame.origin.x) {
+            return NSOrderedDescending;
+        }
+        return NSOrderedSame;
+    }];
+    return sorted;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -63,7 +123,6 @@ static int MAP = 1;
     [super viewWillAppear:animated];
     [NSThread detachNewThreadSelector:@selector(configureReports) toTarget:self withObject:nil];
     [self updateUI];
-    self.reportMapSegmentControl.backgroundColor = [UIColor whiteColor];
     self.reportMapSegmentControl.tintColor = [UIColor blackColor];
 }
 
@@ -182,7 +241,7 @@ static int MAP = 1;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    NSLog(@"touchesBegan:withEvent:");
+    //NSLog(@"touchesBegan:withEvent:");
     [self.view endEditing:YES];
     [super touchesBegan:touches withEvent:event];
 }
